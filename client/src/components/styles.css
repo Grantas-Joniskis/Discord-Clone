@@ -1,0 +1,5 @@
+.form-background {
+  object-fit: cover;
+  position: absolute;
+  z-index: -10;
+}

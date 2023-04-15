@@ -1,5 +1,4 @@
 const routes = {
-  Test: '/test',
   Register: '/register',
   Login: '/login',
 };
