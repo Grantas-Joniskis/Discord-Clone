@@ -1,0 +1,3 @@
+class BaseIoException extends Error {
+    
+}

@@ -1,0 +1,50 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+
+model User {
+  id       Int       @id @default(autoincrement()) @db.UnsignedInt
+  email    String    @unique
+  name     String    @unique
+  password String    @db.Text
+  sentPrivateMessages PrivateMessage[] @relation("sentPrivateMessages")
+  receivedPrivateMessage PrivateMessage[] @relation("receivedPrivateMessage")
+  channelMessages   ChannelMessage[]
+}
+
+
+// Discord clone
+model Channel {
+  id    Int         @id @default(autoincrement()) @db.UnsignedInt
+  name  String      @unique
+  messages ChannelMessage[]
+}
+
+model ChannelMessage {
+  id         Int          @id @default(autoincrement()) @db.UnsignedInt
+  author     User         @relation(references: [id], fields: [authorId])
+  authorId   Int          @db.UnsignedInt
+  channel    Channel      @relation(references: [id], fields: [channelId])
+  channelId  Int          @db.UnsignedInt
+  content    String       @db.Text
+  date       DateTime
+}
+
+model PrivateMessage {
+  id         Int          @id @default(autoincrement()) @db.UnsignedInt
+  author     User         @relation(name: "sentPrivateMessages", fields: [authorId], references: [id])
+  authorId   Int          @db.UnsignedInt
+  to         User         @relation(name: "receivedPrivateMessage", fields: [toId], references: [id])
+  toId       Int          @db.UnsignedInt
+  content    String       @db.Text
+  date       DateTime     @default(now())
+}
