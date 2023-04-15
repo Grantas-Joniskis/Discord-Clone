@@ -1,13 +1,13 @@
 import e from "express";
-import BaseController from "../core/class/controller/BaseController";
+import BaseController from "../core/class/http-controller/BaseController";
 import Joi from "joi";
-import IControllerPostExtension from "../core/class/controller/IControllerPostExtension";
+import IControllerPostExtension from "../core/class/http-controller/IControllerPostExtension";
 import RequestHelper from "../core/class/helpers/RequestHelper";
 import NotFoundException from "../core/class/http-exceptions/NotFoundRequestException";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import {JwtUser} from "../types/JwtUser";
-import DataBag from "../core/class/controller/DataBag";
+import DataBag from "../core/class/http-controller/DataBag";
 class LoginController extends BaseController implements IControllerPostExtension {
     async post(data: DataBag, request: e.Request, response: e.Response) {
         const schemaLogin = Joi.object({
