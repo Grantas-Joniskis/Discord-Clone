@@ -1,7 +1,9 @@
 :root {
   --discord-main: #23272A;
-  --discord-secondary: #2c2f33;
+  --discord-secondary: #2C2F33;
   --discord-text: #99AAB5;
   --discord-light: #ffffff;
-  --discord-info: #7289dA;
+  --discord-info: #7289DA;
+  --discord-info-20: #5B6EAE;
+  --discord-info-40: #506099;
 }

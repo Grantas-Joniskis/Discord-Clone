@@ -1,4 +1,74 @@
+.page-container {
+  height: 100vh;
+}
+
+.discord-logo {
+  position: relative;
+  top: -50px;
+}
+
+.discord-white-logo {
+  width: 40px;
+}
+
+.discord-text-logo {
+  width: 140px;
+}
+
+.register-form {
+  margin: 0 auto;
+  height: 400px;
+  background-color: var(--discord-secondary);
+}
+
 .title {
-  background-color: var(--discord-main);
   color: var(--discord-light);
+}
+
+.register-form-label {
+  color: var(--discord-text);
+  font-size: 13px;
+}
+
+.register-form-input {
+  background-color: var(--discord-main);
+}
+
+.register-form-input:focus {
+  background-color: var(--discord-main);
+}
+
+/* Continue Button */
+.register-form-button {
+  border: none;
+  color: var(--discord-light);
+  background-color: var(--discord-info);
+}
+
+.register-form-button:hover {
+  transition: 300ms;
+  background-color: var(--discord-info-20);
+}
+
+.register-form-button:focus {
+  transition: 300ms;
+  background-color: var(--discord-info-40);
+}
+
+.register-form-link {
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--discord-info-20);
+}
+
+.register-form-link:hover {
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--discord-info-40);
+}
+
+.register-form-link:focus {
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--discord-info-40);
 }
