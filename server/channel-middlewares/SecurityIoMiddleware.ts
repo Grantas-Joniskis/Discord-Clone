@@ -2,7 +2,7 @@ import BaseIoMiddleware from "../core/class/middleware/BaseIoMiddleware";
 import {Socket} from "socket.io";
 import jwt from "jsonwebtoken";
 import {JwtUser} from "../types/JwtUser";
-import DataBag from "../core/class/controller/DataBag";
+import DataBag from "../core/class/http-controller/DataBag";
 
 class SecurityIoMiddleware extends BaseIoMiddleware {
     async handle(dataBag: DataBag, socket: Socket): Promise<boolean> {

@@ -1,8 +1,8 @@
-import BaseController from "../core/class/controller/BaseController";
-import DataBag from "../core/class/controller/DataBag";
+import BaseController from "../core/class/http-controller/BaseController";
+import DataBag from "../core/class/http-controller/DataBag";
 import e from "express";
 import {User} from "@prisma/client";
-import IControllerGetExtension from "../core/class/controller/IControllerGetExtension";
+import IControllerGetExtension from "../core/class/http-controller/IControllerGetExtension";
 import RequestHelper from "../core/class/helpers/RequestHelper";
 import Joi from "joi";
 

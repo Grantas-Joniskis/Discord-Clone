@@ -1,18 +1,18 @@
 import {Application, Request, Response} from "express";
 import InterfaceHelper from "../helpers/InterfaceHelper";
-import IControllerGetExtension from "../controller/IControllerGetExtension";
-import BaseController from "../controller/BaseController";
-import IControllerPostExtension from "../controller/IControllerPostExtension";
+import IControllerGetExtension from "../http-controller/IControllerGetExtension";
+import BaseController from "../http-controller/BaseController";
+import IControllerPostExtension from "../http-controller/IControllerPostExtension";
 import {PrismaClient} from "@prisma/client";
 import RequestHelper from "../helpers/RequestHelper";
 import BaseHttpMiddleware from "../middleware/BaseHttpMiddleware";
 import BaseHttpException from "../http-exceptions/BaseHttpException";
-import DataBag from "../controller/DataBag";
+import DataBag from "../http-controller/DataBag";
 import {Server as SocketIoServer, Socket} from "socket.io";
-import BaseChannel from "../channel/BaseChannel";
+import BaseChannel from "../io/BaseChannel";
 import BaseIoMiddleware from "../middleware/BaseIoMiddleware";
-import BaseRequestCaller from "../controller/BaseRequestCaller";
-import BaseIoConnectionMiddleware from "../middleware/BaseIoConnectionMiddleware";
+import BaseRequestCaller from "../http-controller/BaseRequestCaller";
+import BaseIoHook from "../io/BaseIoHook";
 
 class Router {
     private readonly _app : Application;
@@ -83,13 +83,10 @@ class Router {
         socket.emit("server-error", err.message);
     }
 
-    public useChannelConnectionMiddleware(middleware: BaseIoConnectionMiddleware) {
-        this.initCallerMember(middleware);
-        this._io.on("connection", async socket => {
-            const accept = await middleware.handle(socket);
-            if (!accept) {
-                socket.disconnect();
-            }
+    public registerIoHook(ioHook: BaseIoHook) {
+        this.initCallerMember(ioHook);
+        this._io.on(ioHook.getEventName(), socket => {
+            ioHook.handle(socket)
         })
     }
     public registerChannel(channel: BaseChannel, middlewares: Array<BaseIoMiddleware> = new Array<BaseIoMiddleware>()) {

@@ -11,8 +11,8 @@ import PingChannel from "./channels/PingChannel";
 import SecurityIoMiddleware from "./channel-middlewares/SecurityIoMiddleware";
 import SendMessageController from "./controllers/SendMessageController";
 import SecurityHttpMiddleware from "./controller-middlewares/SecurityHttpMiddleware";
-import InitSocketDataMiddleware from "./channel-middlewares/InitSocketDataMiddleware";
 import PrivateMessageHistoryController from "./controllers/PrivateMessageHistoryController";
+import DisconnectIfNotLogged from "./io-hooks/DisconnectIfNotLogged";
 dotenv.config();
 
 const app: Express = express();
@@ -37,7 +37,7 @@ app.use((req, res, next) => {
 const prismaClient = new PrismaClient();
 const router = new Router(app, prismaClient, io);
 
-router.useChannelConnectionMiddleware(new InitSocketDataMiddleware())
+router.registerIoHook(new DisconnectIfNotLogged("connection"))
 
 router.registerController(new LoginController("/login"))
 router.registerController(new RegisterController("/register"))
@@ -47,3 +47,4 @@ router.registerController(new PrivateMessageHistoryController("/private-message/
 router.registerChannel(new PingChannel("ping"), [new SecurityIoMiddleware()]);
 
 server.listen(process.env.HTTP_PORT);
+console.log("Server running on port "+process.env.HTTP_PORT)

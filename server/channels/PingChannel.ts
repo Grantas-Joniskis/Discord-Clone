@@ -1,6 +1,6 @@
-import BaseChannel from "../core/class/channel/BaseChannel";
+import BaseChannel from "../core/class/io/BaseChannel";
 import {Socket} from "socket.io";
-import DataBag from "../core/class/controller/DataBag";
+import DataBag from "../core/class/http-controller/DataBag";
 
 class PingChannel extends BaseChannel {
     handle(dataBag: DataBag, socket: Socket, message: string): void {

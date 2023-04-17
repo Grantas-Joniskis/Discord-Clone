@@ -2,7 +2,7 @@ import BaseHttpMiddleware from "../core/class/middleware/BaseHttpMiddleware";
 import e from "express";
 import UnauthorizedRequestException from "../core/class/http-exceptions/UnauthorizedRequestException";
 import jwt from "jsonwebtoken";
-import DataBag from "../core/class/controller/DataBag";
+import DataBag from "../core/class/http-controller/DataBag";
 import BadRequestException from "../core/class/http-exceptions/BadRequestException";
 import {JwtUser} from "../types/JwtUser";
 import NotFoundRequestException from "../core/class/http-exceptions/NotFoundRequestException";
