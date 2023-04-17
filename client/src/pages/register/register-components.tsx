@@ -22,7 +22,7 @@ export const DiscordLogo = () => (
 export const RegisterForm: React.FC<ChildrenProp> = ({
   children,
 }) => (
-  <form className="register-form rounded p-4 col-12">
+  <form className="register-form rounded p-4 col-12 py-md-5 px-lg-5">
     {children}
   </form>
 );
@@ -36,7 +36,7 @@ export const Header: React.FC<ChildrenProp> = ({
 );
 
 export const Title = () => (
-  <h1 className="display-6 fs-2 text-center title m-0">Create an account</h1>
+  <h1 className="display-6 text-center m-0 register-title">Create an account</h1>
 );
 
 export const Body: React.FC<ChildrenProp> = ({
@@ -69,7 +69,7 @@ export const InputPassword = () => (
 );
 
 export const ButtonContinue = () => (
-  <button className="col-12 p-2 mb-1 rounded register-form-button" type="submit">Continue</button>
+  <button className="col-12 mb-1 rounded register-form-button" type="submit">Continue</button>
 );
 
 export const LoginLink = () => (
