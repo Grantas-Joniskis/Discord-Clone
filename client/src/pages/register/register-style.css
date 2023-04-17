@@ -31,10 +31,13 @@
 }
 
 .register-form-input {
+  height: 36px;
+  color: var(--discord-light);
   background-color: var(--discord-main);
 }
 
 .register-form-input:focus {
+  color: var(--discord-light);
   background-color: var(--discord-main);
 }
 
@@ -55,6 +58,7 @@
   background-color: var(--discord-info-40);
 }
 
+/* Anchor Link */
 .register-form-link {
   font-size: 15px;
   text-decoration: none;

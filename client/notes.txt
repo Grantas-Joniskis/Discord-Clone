@@ -1,1 +1,2 @@
-How to make multiple instances of program?
+Bugs:
+  - fix input autofill background color.
