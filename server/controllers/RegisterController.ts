@@ -18,7 +18,7 @@ class LoginController extends BaseController implements IControllerPostExtension
                 .required(),
             password: Joi.string()
                 .required().regex(new RegExp("^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?!.* ).{8,32}$")),
-            name: Joi.string()
+            username: Joi.string()
                 .required()
                 .max(30)
                 .min(3)
