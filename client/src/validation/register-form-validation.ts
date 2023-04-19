@@ -18,12 +18,15 @@ const validateRegisterInput = (registerUser: RegisterUser): boolean => {
   }
 
   const hasUpperCase = /[A-Z]/.test(password);
+  const hasLowerCase = /[a-z]/.test(password);
+
   if (
     password.length < 4
-        || password.length > 20
-        || !hasUpperCase
+    || password.length > 20
+    || !hasUpperCase
+    || !hasLowerCase
   ) {
-    console.error('Password must be 4-20 characters and include an uppercase letter');
+    console.error('Password must be 4-20 characters and include at least one uppercase and one lowercase letter');
     return false;
   }
   return true;
