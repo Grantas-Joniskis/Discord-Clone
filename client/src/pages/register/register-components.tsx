@@ -1,6 +1,6 @@
 import React from 'react';
 import './register-style.css';
-
+import handleRegister from 'events/register-form-event';
 import discordTextLogo from '../../images/discord-text-logo.png';
 import discordWhiteLogo from '../../images/discord-white-logo.png';
 
@@ -22,7 +22,7 @@ export const DiscordLogo = () => (
 export const RegisterForm: React.FC<ChildrenProp> = ({
   children,
 }) => (
-  <form className="register-form rounded p-4 col-12 py-md-5 px-lg-5">
+  <form className="register-form rounded p-4 col-12 py-md-5 px-lg-5" onSubmit={handleRegister}>
     {children}
   </form>
 );
@@ -50,21 +50,21 @@ export const Body: React.FC<ChildrenProp> = ({
 export const InputEmail = () => (
   <div className="mb-2">
     <label className="form-label register-form-label text-uppercase mb-1" htmlFor="email">email</label>
-    <input className="form-control border border-black register-form-input" type="email" id="email" />
+    <input className="form-control border border-black register-form-input" type="text" name="email" />
   </div>
 );
 
 export const InputUsername = () => (
   <div className="mb-2">
     <label className="form-label register-form-label text-uppercase mb-1" htmlFor="username">username</label>
-    <input className="form-control border border-black register-form-input" type="text" id="username" />
+    <input className="form-control border border-black register-form-input" type="text" name="username" />
   </div>
 );
 
 export const InputPassword = () => (
   <div className="mb-4">
     <label className="form-label text-uppercase mb-1 register-form-label " htmlFor="password">password</label>
-    <input className="form-control border border-black register-form-input" type="password" id="password" />
+    <input className="form-control border border-black register-form-input" type="password" name="password" />
   </div>
 );
 

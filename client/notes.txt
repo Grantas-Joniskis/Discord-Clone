@@ -1,7 +1,18 @@
 Bugs:
   - fix register input autofill background color.
+  - Add visible validation to forms.
+  ? Form data undefined value becomes string -> bad practice!
 
 TODO:
-  - How to send POST request to the server using axios from the form?
-  - How to use .env file with React?
+  - How to send POST request to the server using axios from the form? (COMPLETED)
+  - How to use .env file with React? (COMPLETED)
   - Learn useEffect with React.
+
+  - Display invalid inputs in forms.
+
+GENERAL:
+  - How to store types properly?
+
+FOR LATER:
+  - Move index.html file to src folder.
+  
