@@ -6,7 +6,6 @@ const handleRegister = async (event: FormEvent<HTMLFormElement>): Promise<void> 
   event.preventDefault();
 
   const formData = new FormData(event.currentTarget);
-  console.log(formData);
   const data = Object.fromEntries(formData.entries());
   const registerUser: RegisterUser = {
     email: String(data.email),

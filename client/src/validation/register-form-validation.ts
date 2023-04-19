@@ -1,7 +1,7 @@
 const validateRegisterInput = (registerUser: RegisterUser): boolean => {
   const { email, username, password } = registerUser;
 
-  if (email === 'undefined') {
+  if (email === '') {
     console.error('Email is required!');
     return false;
   }

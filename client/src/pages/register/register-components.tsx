@@ -68,8 +68,8 @@ export const InputPassword = () => (
   </div>
 );
 
-export const ButtonContinue = () => (
-  <button className="col-12 mb-1 rounded register-form-button" type="submit">Continue</button>
+export const ButtonRegister = () => (
+  <button className="col-12 mb-1 rounded register-form-button" type="submit">Register</button>
 );
 
 export const LoginLink = () => (

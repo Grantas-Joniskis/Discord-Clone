@@ -2,7 +2,7 @@ import React from 'react';
 import FormBackground from 'components/form-background';
 import {
   Body,
-  ButtonContinue,
+  ButtonRegister,
   Container,
   DiscordLogo,
   Header, InputEmail, InputPassword, InputUsername, LoginLink, RegisterForm, Title,
@@ -21,7 +21,7 @@ const RegisterPage = () => (
           <InputEmail />
           <InputUsername />
           <InputPassword />
-          <ButtonContinue />
+          <ButtonRegister />
           <LoginLink />
         </Body>
       </RegisterForm>
