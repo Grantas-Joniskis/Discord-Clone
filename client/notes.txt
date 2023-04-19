@@ -1,7 +1,7 @@
 FRONT-END:
   BUGS:
-    - fix register input autofill background color.
-    ? Form data undefined value becomes string -> bad practice!
+    - fix register input autofill background color. (PARTIALY FIXED)
+    ? Form data undefined value becomes string -> bad practice! (GONE??)
 
   TODO:
     - How to send POST request to the server using axios from the form? (COMPLETED)
@@ -15,8 +15,12 @@ FRONT-END:
     - Move index.html file to src folder.
     - Add visible validation to forms.
 
-  OFFSIDE:
-    - Learn Socket.IO and React.useState() on 20th. Create demo version of chat.
+  PLAN:
+    - 20th Learn Socket.IO and React.useState(). Create simple demo version of chat.
+    - 21st Create the bones of main chat page with well functioning logic. Users can message each other.
+    - 22nd Design the main chat page. Refactor the code.
+    - 23rd -----
+    - 24th Study the back-end code prepare for presentation.
 
 BACK-END:
   TODO:
