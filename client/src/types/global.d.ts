@@ -1,3 +1,9 @@
 type ChildrenProp = {
-  children: React.ReactNode;
+  children: React.ReactNode,
+};
+
+type RegisterUser = {
+  email: string,
+  username: string,
+  password: string,
 };

@@ -13,6 +13,7 @@ import SendMessageController from "./controllers/SendMessageController";
 import SecurityHttpMiddleware from "./controller-middlewares/SecurityHttpMiddleware";
 import PrivateMessageHistoryController from "./controllers/PrivateMessageHistoryController";
 import DisconnectIfNotLogged from "./io-hooks/DisconnectIfNotLogged";
+import cors from 'cors';
 dotenv.config();
 
 const app: Express = express();
@@ -27,6 +28,7 @@ const io = new SocketIoServer(server, {
     }
 });
 
+app.use(cors());
 app.use(express.json({limit: "2mb"}))
 app.use(AppError) // Useful for middleware error
 app.use((req, res, next) => {

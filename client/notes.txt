@@ -1,2 +1,7 @@
 Bugs:
-  - fix input autofill background color.
+  - fix register input autofill background color.
+
+TODO:
+  - How to send POST request to the server using axios from the form?
+  - How to use .env file with React?
+  - Learn useEffect with React.
