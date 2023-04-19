@@ -1,25 +1,31 @@
-BUGS:
-  - fix register input autofill background color.
+FRONT-END:
+  BUGS:
+    - fix register input autofill background color.
+    ? Form data undefined value becomes string -> bad practice!
 
-  ? Form data undefined value becomes string -> bad practice!
+  TODO:
+    - How to send POST request to the server using axios from the form? (COMPLETED)
+    - How to use .env file with React? (COMPLETED)
+    - Learn useEffect, useState with React.
 
-TODO:
-  - How to send POST request to the server using axios from the form? (COMPLETED)
-  - How to use .env file with React? (COMPLETED)
-  - Learn useEffect, useState with React.
+  GENERAL:
+    - How to store types properly?
 
-GENERAL:
-  - How to store types properly?
+  FOR LATER:
+    - Move index.html file to src folder.
+    - Add visible validation to forms.
 
-FOR LATER:
-  - Move index.html file to src folder.
-  - Add visible validation to forms.
-
-QUESTIONS:
-  - How to know if person is logged in?
-  - How to get data in order to update chat messages?
+  OFFSIDE:
+    - Learn Socket.IO and React.useState() on 20th. Create demo version of chat.
 
 BACK-END:
   TODO:
-    - Create api for user list.
+    - Create api for user list. 
     - Create api for checking if the user is logged in.
+
+QUESTIONS:
+  - How to know if person is logged in? (CLEARED)
+  - How to get data in order to update chat messages? (CLEARED)
+  - How to connect one user with another?
+  - How the messages are stored?
+  

@@ -50,14 +50,14 @@ export const Body: React.FC<ChildrenProp> = ({
 export const InputEmail = () => (
   <div className="mb-2">
     <label className="form-label login-form-label text-uppercase mb-1" htmlFor="email">email</label>
-    <input className="form-control border border-black login-form-input" type="text" name="email" />
+    <input className="form-control border border-black login-form-input" autoComplete="off" type="text" name="email" />
   </div>
 );
 
 export const InputPassword = () => (
   <div className="mb-4">
     <label className="form-label text-uppercase mb-1 login-form-label " htmlFor="password">password</label>
-    <input className="form-control border border-black login-form-input" type="password" name="password" />
+    <input className="form-control border border-black login-form-input" autoComplete="off" type="password" name="password" />
   </div>
 );
 
