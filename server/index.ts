@@ -23,6 +23,7 @@ app.use(express.json({limit: "2mb"}))
 app.use(AppError) // Useful for middleware error
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Headers', '*');
     next();
 })
 
