@@ -1,7 +1,7 @@
 const validateRegisterInput = (registerUser: RegisterUser): boolean => {
   const { email, username, password } = registerUser;
 
-  if (email === '') {
+  if (email.trim() === '') {
     console.error('Email is required!');
     return false;
   }

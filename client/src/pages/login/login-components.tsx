@@ -1,5 +1,6 @@
 import React from 'react';
 import './login-style.css';
+import handleLogin from 'events/login-form-event';
 import discordTextLogo from '../../images/discord-text-logo.png';
 import discordWhiteLogo from '../../images/discord-white-logo.png';
 
@@ -21,7 +22,7 @@ export const DiscordLogo = () => (
 export const LoginForm: React.FC<ChildrenProp> = ({
   children,
 }) => (
-  <form className="login-form rounded p-4 col-12 py-md-5 px-lg-5">
+  <form className="login-form rounded p-4 col-12 py-md-5 px-lg-5" onSubmit={handleLogin}>
     {children}
   </form>
 );

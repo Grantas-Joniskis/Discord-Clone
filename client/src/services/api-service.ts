@@ -23,8 +23,20 @@ const postRegisterUser = async (registerUser: RegisterUser) => {
   });
 };
 
+const postLoginUser = async (loginUser: LoginUser) => {
+  api.post(routes.Login, {
+    email: loginUser.email,
+    password: loginUser.password,
+  }).then((response) => {
+    console.log(response);
+  }).catch((error) => {
+    console.log(error);
+  });
+};
+
 const ApiService = {
   postRegisterUser,
+  postLoginUser,
 };
 
 export default ApiService;

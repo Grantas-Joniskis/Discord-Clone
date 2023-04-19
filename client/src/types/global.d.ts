@@ -7,3 +7,8 @@ type RegisterUser = {
   username: string,
   password: string,
 };
+
+type LoginUser = {
+  email: string,
+  password: string,
+};
