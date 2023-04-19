@@ -14,6 +14,8 @@ import SecurityHttpMiddleware from "./controller-middlewares/SecurityHttpMiddlew
 import PrivateMessageHistoryController from "./controllers/PrivateMessageHistoryController";
 import DisconnectIfNotLogged from "./io-hooks/DisconnectIfNotLogged";
 import cors from 'cors';
+import UserListController from "./controllers/UserListController";
+import UserOnlineController from "./controllers/UserOnlineController";
 dotenv.config();
 
 const app: Express = express();
@@ -45,6 +47,8 @@ router.registerController(new LoginController("/login"))
 router.registerController(new RegisterController("/register"))
 router.registerController(new SendMessageController("/private-message/:to"), [new SecurityHttpMiddleware()])
 router.registerController(new PrivateMessageHistoryController("/private-message/:id/:page"), [new SecurityHttpMiddleware()])
+router.registerController(new UserListController("/users"), [new SecurityHttpMiddleware()])
+router.registerController(new UserOnlineController("/user/:user/is-online"), [new SecurityHttpMiddleware()])
 
 router.registerChannel(new PingChannel("ping"), [new SecurityIoMiddleware()]);
 

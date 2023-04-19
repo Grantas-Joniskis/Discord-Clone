@@ -41,6 +41,7 @@ class SendMessageController extends BaseController implements IControllerPostExt
 
         this.io.fetchSockets().then(sockets => {
             sockets.forEach(socket => {
+                if (socket.data.user === undefined) return;
                 if((<JwtUser>socket.data.user).id === receiver.id) {
                     socket.emit("receive-private-message", data.user.id, schemaRequest.text)
                 }
