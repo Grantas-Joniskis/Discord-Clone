@@ -6,7 +6,10 @@ FRONT-END:
   TODO:
     - How to send POST request to the server using axios from the form? (COMPLETED)
     - How to use .env file with React? (COMPLETED)
-    - Learn useEffect, useState with React.
+    - Learn useEffect, useState with React. (IN-PROGRESS)
+    - !! Split Discord Logo into componenets folder. !! 
+    - !! Move IO to services folder !!
+    - !! Rename ApiService to AxiosService !!
 
   GENERAL:
     - How to store types properly?
@@ -15,17 +18,10 @@ FRONT-END:
     - Move index.html file to src folder.
     - Add visible validation to forms.
 
-  PLAN:
-    - 20th Learn Socket.IO and React.useState(). Create simple demo version of chat.
-    - 21st Create the bones of main chat page with well functioning logic. Users can message each other.
-    - 22nd Design the main chat page. Refactor the code.
-    - 23rd -----
-    - 24th Study the back-end code prepare for presentation.
-
 BACK-END:
   TODO:
-    - Create api for user list. 
-    - Create api for checking if the user is logged in.
+    - Create api for user list. (COMPLETED)
+    - Create api for checking if the user is logged in. (COMPLETED)
 
 QUESTIONS:
   - How to know if person is logged in? (CLEARED)
@@ -33,3 +29,9 @@ QUESTIONS:
   - How to connect one user with another?
   - How the messages are stored?
   
+PLAN:
+- 20th Learn Socket.IO and React.useState(). Create simple demo version of chat.
+- 21st Create the bones of main chat page with well functioning logic. Users can message each other.
+- 22nd Design the main chat page. Refactor the code.
+- 23rd If enough time, create extra functionallity for updating user data.
+- 24th Study the back-end code prepare for presentation.
