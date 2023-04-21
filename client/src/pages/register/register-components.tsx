@@ -1,21 +1,12 @@
 import React from 'react';
 import './register-style.css';
 import handleRegister from 'events/register-form-event';
-import discordTextLogo from '../../images/discord-text-logo.png';
-import discordWhiteLogo from '../../images/discord-white-logo.png';
 
 export const Container: React.FC<ChildrenProp> = ({
   children,
 }) => (
   <div className="page-container vw-100 p-3 d-flex flex-column justify-content-center">
     {children}
-  </div>
-);
-
-export const DiscordLogo = () => (
-  <div className="discord-logo text-center">
-    <img className="discord-white-logo mx-2" src={discordWhiteLogo} alt="Discord White Logo" />
-    <img className="discord-text-logo" src={discordTextLogo} alt="Discord Text Logo" />
   </div>
 );
 

@@ -3,3 +3,16 @@
   position: absolute;
   z-index: -10;
 }
+
+.discord-logo {
+  position: relative;
+  top: -50px;
+}
+
+.discord-white-logo {
+  width: 40px;
+}
+
+.discord-text-logo {
+  width: 140px;
+}

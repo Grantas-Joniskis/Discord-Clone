@@ -1,10 +1,10 @@
 import React from 'react';
 import FormBackground from 'components/form-background';
+import DiscordLogo from 'components/form-discord-logo';
 import {
   Body,
   ButtonRegister,
   Container,
-  DiscordLogo,
   Header, InputEmail, InputPassword, InputUsername, LoginLink, RegisterForm, Title,
 } from './register-components';
 
