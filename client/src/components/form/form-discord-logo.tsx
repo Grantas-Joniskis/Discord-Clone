@@ -1,7 +1,7 @@
 import React from 'react';
 import discordTextLogo from '../../images/discord-text-logo.png';
 import discordWhiteLogo from '../../images/discord-white-logo.png';
-import './styles.css';
+import './form-styles.css';
 
 const DiscordLogo = () => (
   <div className="discord-logo text-center">

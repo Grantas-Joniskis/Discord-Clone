@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './form-styles.css';
 import backgroundImage from '../../images/register-login-bg.png';
 
 const FormBackground = () => (

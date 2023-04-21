@@ -1,79 +1,13 @@
-.page-container {
-  height: 100vh;
-}
-
-.login-title {
-  font-size: 28px;
-  color: var(--discord-light);
-}
-
 .login-form {
   margin: 0 auto;
   height: 330px;
   background-color: var(--discord-secondary);
 }
 
-/* Login Button */
-.login-form-button {
-  padding: 8px;
-  border: none;
-  color: var(--discord-light);
-  background-color: var(--discord-info);
-}
-
-.login-form-button:hover {
-  transition: 300ms;
-  background-color: var(--discord-info-20);
-}
-
-.login-form-button:focus {
-  transition: 300ms;
-  background-color: var(--discord-info-40);
-}
-
-/* Anchor Link */
-.login-form-link {
-  font-size: 15px;
-  text-decoration: none;
-  color: var(--discord-info-20);
-}
-
-.login-form-link:hover {
-  font-size: 15px;
-  text-decoration: none;
-  color: var(--discord-info-40);
-}
-
-.login-form-link:focus {
-  font-size: 15px;
-  text-decoration: none;
-  color: var(--discord-info-40);
-}
-
 /* MIN-WIDTH for MD */
 @media screen and (min-width: 768px) {
   .login-form {
     height: 400px;
-  }
-
-  .login-title {
-    font-size: 38px;
-  }
-
-  .login-form-button {
-    padding: 10px;
-  }
-
-  .login-form-link {
-    font-size: 20px;
-  }
-
-  .login-form-link:hover {
-    font-size: 20px;
-  }
-
-  .login-form-link:focus {
-    font-size: 20px;
   }
 }
 

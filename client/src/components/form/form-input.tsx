@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.css';
+import './form-styles.css';
 
 type InputGroupProps = ChildrenProp & {
   className?: string,

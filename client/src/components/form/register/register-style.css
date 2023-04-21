@@ -1,54 +1,8 @@
-.page-container {
-  height: 100vh;
-}
-
 /* { Register Form } */
 .register-form {
   margin: 0 auto;
   height: 400px;
   background-color: var(--discord-secondary);
-}
-
-.register-title {
-  font-size: 28px;
-  color: var(--discord-light);
-}
-
-/* { Register Button } */
-.register-form-button {
-  padding: 8px;
-  border: none;
-  color: var(--discord-light);
-  background-color: var(--discord-info);
-}
-
-.register-form-button:hover {
-  transition: 300ms;
-  background-color: var(--discord-info-20);
-}
-
-.register-form-button:focus {
-  transition: 300ms;
-  background-color: var(--discord-info-40);
-}
-
-/* { Anchor Link } */
-.register-form-link {
-  font-size: 15px;
-  text-decoration: none;
-  color: var(--discord-info-20);
-}
-
-.register-form-link:hover {
-  font-size: 15px;
-  text-decoration: none;
-  color: var(--discord-info-40);
-}
-
-.register-form-link:focus {
-  font-size: 15px;
-  text-decoration: none;
-  color: var(--discord-info-40);
 }
 
 /* { MIN-WIDTH for MD } */
@@ -58,35 +12,13 @@
     height: 470px;
   }
 
-  .register-title {
-    font-size: 38px;
-  }
-
-  .register-form-input {
-    height: 42px;
-  }
-
-  .register-form-button {
-    padding: 10px;
-  }
-
-  .register-form-link {
-    font-size: 20px;
-  }
-
-  .register-form-link:hover {
-    font-size: 20px;
-  }
-
-  .register-form-link:focus {
-    font-size: 20px;
-  }
-
 }
 
 /* MIN-WIDTH for LG */
 @media screen and (min-width: 992px) {
+
   .register-form {
     width: 960px;
   }
+
 }

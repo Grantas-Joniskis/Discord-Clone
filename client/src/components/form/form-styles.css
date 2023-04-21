@@ -1,0 +1,127 @@
+/* { FORM PAGE CONTAINER } */
+.form-page-container {
+  height: 100vh;
+}
+
+/* { FORM IMAGE BACKGROUND } */
+.form-background {
+  object-fit: cover;
+  position: absolute;
+  z-index: -10;
+}
+
+/* { DISCORD LOGO } */
+.discord-logo {
+  position: relative;
+  top: -50px;
+}
+
+.discord-white-logo {
+  width: 40px;
+}
+
+.discord-text-logo {
+  width: 140px;
+}
+
+/* { FORM TITLE } */
+.form-title {
+  font-size: 28px;
+  color: var(--discord-light);
+}
+
+/* { FORM INPUT } */
+.form-label {
+  color: var(--discord-text);
+  font-size: 13px;
+}
+
+.form-input {
+  height: 36px;
+  color: var(--discord-light);
+  background-color: var(--discord-main);
+}
+
+.form-input:focus {
+  color: var(--discord-light);
+  background-color: var(--discord-main);
+}
+
+/* { FORM BUTTON } */
+.form-button {
+  padding: 8px;
+  border: none;
+  color: var(--discord-light);
+  background-color: var(--discord-info);
+}
+
+.form-button:hover {
+  transition: 300ms;
+  background-color: var(--discord-info-20);
+}
+
+.form-button:focus {
+  transition: 300ms;
+  background-color: var(--discord-info-40);
+}
+
+/* { FORM ANCHOR LINK } */
+.form-link {
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--discord-info-20);
+}
+
+.link:hover {
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--discord-info-40);
+}
+
+.form-link:focus {
+  font-size: 15px;
+  text-decoration: none;
+  color: var(--discord-info-40);
+}
+
+/* { MIN-WIDTH for MD } */
+@media screen and (min-width: 768px) {
+
+  .discord-logo {
+    position: relative;
+    top: -65px;
+  }
+
+  .discord-white-logo {
+    width: 100px;
+  }
+
+  .discord-text-logo {
+    width: 300px;
+  }
+
+  .form-title {
+    font-size: 38px;
+  }
+
+  .form-input {
+    height: 42px;
+  }
+
+  .form-button {
+    padding: 10px;
+  }
+
+  .form-link {
+    font-size: 20px;
+  }
+
+  .form-link:hover {
+    font-size: 20px;
+  }
+
+  .form-link:focus {
+    font-size: 20px;
+  }
+
+}
