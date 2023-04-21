@@ -2,19 +2,7 @@
   height: 100vh;
 }
 
-.discord-logo {
-  position: relative;
-  top: -50px;
-}
-
-.discord-white-logo {
-  width: 40px;
-}
-
-.discord-text-logo {
-  width: 140px;
-}
-
+/* { Register Form } */
 .register-form {
   margin: 0 auto;
   height: 400px;
@@ -26,23 +14,7 @@
   color: var(--discord-light);
 }
 
-.register-form-label {
-  color: var(--discord-text);
-  font-size: 13px;
-}
-
-.register-form-input {
-  height: 36px;
-  color: var(--discord-light);
-  background-color: var(--discord-main);
-}
-
-.register-form-input:focus {
-  color: var(--discord-light);
-  background-color: var(--discord-main);
-}
-
-/* Register Button */
+/* { Register Button } */
 .register-form-button {
   padding: 8px;
   border: none;
@@ -60,7 +32,7 @@
   background-color: var(--discord-info-40);
 }
 
-/* Anchor Link */
+/* { Anchor Link } */
 .register-form-link {
   font-size: 15px;
   text-decoration: none;
@@ -79,20 +51,8 @@
   color: var(--discord-info-40);
 }
 
-/* MIN-WIDTH for MD */
+/* { MIN-WIDTH for MD } */
 @media screen and (min-width: 768px) {
-  .discord-logo {
-    position: relative;
-    top: -65px;
-  }
-
-  .discord-white-logo {
-    width: 100px;
-  }
-  
-  .discord-text-logo {
-    width: 300px;
-  }
 
   .register-form {
     height: 470px;
@@ -121,6 +81,7 @@
   .register-form-link:focus {
     font-size: 20px;
   }
+
 }
 
 /* MIN-WIDTH for LG */

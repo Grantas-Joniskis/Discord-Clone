@@ -3,7 +3,6 @@ import { createBrowserRouter } from 'react-router-dom';
 import RegisterPage from 'pages/register-page';
 import LoginPage from 'pages/login-page';
 import PostForm from 'test/post-form';
-import ChatPage from 'pages/chat/chat-page';
 import routes from './routes';
 
 const router = createBrowserRouter(
@@ -15,10 +14,6 @@ const router = createBrowserRouter(
     {
       path: routes.Login,
       element: <LoginPage />,
-    },
-    {
-      path: routes.Chat,
-      element: <ChatPage />,
     },
     {
       path: routes.TestPostFrom,

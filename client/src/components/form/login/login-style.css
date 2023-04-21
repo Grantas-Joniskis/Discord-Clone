@@ -2,19 +2,6 @@
   height: 100vh;
 }
 
-.discord-logo {
-  position: relative;
-  top: -50px;
-}
-
-.discord-white-logo {
-  width: 40px;
-}
-
-.discord-text-logo {
-  width: 140px;
-}
-
 .login-title {
   font-size: 28px;
   color: var(--discord-light);
@@ -24,22 +11,6 @@
   margin: 0 auto;
   height: 330px;
   background-color: var(--discord-secondary);
-}
-
-.login-form-label {
-  color: var(--discord-text);
-  font-size: 13px;
-}
-
-.login-form-input {
-  height: 36px;
-  color: var(--discord-light);
-  background-color: var(--discord-main);
-}
-
-.login-form-input:focus {
-  color: var(--discord-light);
-  background-color: var(--discord-main);
 }
 
 /* Login Button */
@@ -81,29 +52,12 @@
 
 /* MIN-WIDTH for MD */
 @media screen and (min-width: 768px) {
-  .discord-logo {
-    position: relative;
-    top: -65px;
-  }
-
-  .discord-white-logo {
-    width: 100px;
-  }
-  
-  .discord-text-logo {
-    width: 300px;
-  }
-
   .login-form {
     height: 400px;
   }
 
   .login-title {
     font-size: 38px;
-  }
-
-  .login-form-input {
-    height: 42px;
   }
 
   .login-form-button {
