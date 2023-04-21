@@ -7,9 +7,9 @@ FRONT-END:
     - How to send POST request to the server using axios from the form? (COMPLETED)
     - How to use .env file with React? (COMPLETED)
     - Learn useEffect, useState with React. (COMPLETED)
-    - !! Split Discord Logo into componenets folder. !! 
-    - !! Move IO to services folder !!
+    - !! Split Discord Logo into componenets folder. !! (COMPLETED)
     - !! Rename ApiService to AxiosService !!
+    - !! Move IO to services folder !!
 
   GENERAL:
     - How to store types properly?

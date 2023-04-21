@@ -1,5 +1,5 @@
 import React, { FormEvent } from 'react';
-import ApiService from 'services/api-service';
+import AxiosService from 'services/axios/axios-service';
 
 const handleSumbit = async (event: FormEvent<HTMLFormElement>) => {
   event.preventDefault();
@@ -13,7 +13,7 @@ const handleSumbit = async (event: FormEvent<HTMLFormElement>) => {
   };
 
   try {
-    const response = ApiService.postRegisterUser(registerUser);
+    const response = AxiosService.postRegisterUser(registerUser);
     console.log('Response:', response);
   } catch (error) {
     console.error('Error:', error);

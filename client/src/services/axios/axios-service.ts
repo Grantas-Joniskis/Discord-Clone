@@ -1,5 +1,5 @@
 import axios from 'axios';
-import config from 'config';
+import config from 'config/config';
 import routes from 'navigation/routes';
 
 const api = axios.create({
@@ -34,9 +34,9 @@ const postLoginUser = async (loginUser: LoginUser) => {
   });
 };
 
-const ApiService = {
+const AxiosService = {
   postRegisterUser,
   postLoginUser,
 };
 
-export default ApiService;
+export default AxiosService;

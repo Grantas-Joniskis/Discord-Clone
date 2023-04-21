@@ -1,6 +1,6 @@
 import { FormEvent } from 'react';
 import routes from 'navigation/routes';
-import ApiService from 'services/api-service';
+import AxiosService from 'services/axios/axios-service';
 import validateRegisterInput from 'validation/register-form-validation';
 
 const handleRegister = async (event: FormEvent<HTMLFormElement>): Promise<void> => {
@@ -17,7 +17,7 @@ const handleRegister = async (event: FormEvent<HTMLFormElement>): Promise<void> 
   if (!validateRegisterInput(registerUser)) return;
 
   try {
-    const response = ApiService.postRegisterUser(registerUser);
+    const response = AxiosService.postRegisterUser(registerUser);
     console.log('Response:', response);
   } catch (error) {
     console.error('Error:', error);

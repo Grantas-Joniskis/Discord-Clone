@@ -1,5 +1,5 @@
 import { FormEvent } from 'react';
-import ApiService from 'services/api-service';
+import AxiosService from 'services/axios/axios-service';
 import validateLoginInput from 'validation/login-form-validation';
 
 const handleLogin = async (event: FormEvent<HTMLFormElement>): Promise<void> => {
@@ -15,7 +15,7 @@ const handleLogin = async (event: FormEvent<HTMLFormElement>): Promise<void> => 
   if (!validateLoginInput(loginUser)) return;
 
   try {
-    const response = ApiService.postLoginUser(loginUser);
+    const response = AxiosService.postLoginUser(loginUser);
     console.log('Response:', response);
   } catch (error) {
     console.error('Error:', error);
