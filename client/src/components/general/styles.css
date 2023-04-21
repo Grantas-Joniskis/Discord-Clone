@@ -1,9 +1,11 @@
+/* { FORM IMAGE BACKGROUND } */
 .form-background {
   object-fit: cover;
   position: absolute;
   z-index: -10;
 }
 
+/* { DISCORD LOGO } */
 .discord-logo {
   position: relative;
   top: -50px;

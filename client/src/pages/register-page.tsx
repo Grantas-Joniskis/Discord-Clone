@@ -1,12 +1,12 @@
 import React from 'react';
-import FormBackground from 'components/form-background';
-import DiscordLogo from 'components/form-discord-logo';
+import FormBackground from 'components/general/form-background';
+import DiscordLogo from 'components/general/form-discord-logo';
 import {
   Body,
   ButtonRegister,
   Container,
   Header, InputEmail, InputPassword, InputUsername, LoginLink, RegisterForm, Title,
-} from './register-components';
+} from '../components/register/register-components';
 
 const RegisterPage = () => (
   <>

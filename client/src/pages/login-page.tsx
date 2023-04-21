@@ -1,11 +1,11 @@
-import FormBackground from 'components/form-background';
 import React from 'react';
-import DiscordLogo from 'components/form-discord-logo';
+import FormBackground from 'components/general/form-background';
+import DiscordLogo from 'components/general/form-discord-logo';
 import {
   Body,
   ButtonLogin,
   Container, Header, InputEmail, InputPassword, LoginForm, RegisterLink, Title,
-} from './login-components';
+} from '../components/login/login-components';
 
 const LoginPage = () => (
   <>

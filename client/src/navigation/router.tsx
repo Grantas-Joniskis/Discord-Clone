@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
-import RegisterPage from 'pages/register/register-page';
-import LoginPage from 'pages/login/login-page';
+import RegisterPage from 'pages/register-page';
+import LoginPage from 'pages/login-page';
 import PostForm from 'test/post-form';
 import ChatPage from 'pages/chat/chat-page';
 import routes from './routes';

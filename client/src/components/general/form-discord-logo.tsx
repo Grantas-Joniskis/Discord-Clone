@@ -1,6 +1,6 @@
 import React from 'react';
-import discordTextLogo from '../images/discord-text-logo.png';
-import discordWhiteLogo from '../images/discord-white-logo.png';
+import discordTextLogo from '../../images/discord-text-logo.png';
+import discordWhiteLogo from '../../images/discord-white-logo.png';
 import './styles.css';
 
 const DiscordLogo = () => (
