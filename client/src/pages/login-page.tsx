@@ -1,33 +1,31 @@
 import React from 'react';
 import FormBackground from 'components/form/form-background';
-import DiscordLogo from 'components/form/form-discord-logo';
-import { Input, InputGroup, InputLabel } from 'components/form/form-input';
+import FormDiscordLogo from 'components/form/form-discord-logo';
+import { FormInput, FormInputGroup, FormInputLabel } from 'components/form/form-input';
 import FormPageContainer from 'components/form/form-page-container';
-import Title from 'components/form/form-title';
+import FormTitle from 'components/form/form-title';
 import { FormButton, FormLink } from 'components/form/form-action';
 import routes from 'navigation/routes';
-import {
-  LoginForm,
-} from '../components/form/login/login-components';
+import FormLogin from 'components/form/login/form-login';
 
 const LoginPage = () => (
   <>
     <FormBackground />
     <FormPageContainer>
-      <DiscordLogo />
-      <LoginForm>
-        <Title>Welcome back!</Title>
-        <InputGroup className="mb-2">
-          <InputLabel htmlFor="email">email</InputLabel>
-          <Input type="text" name="email" />
-        </InputGroup>
-        <InputGroup className="mb-4">
-          <InputLabel htmlFor="password">password</InputLabel>
-          <Input type="password" name="password" />
-        </InputGroup>
+      <FormDiscordLogo />
+      <FormLogin>
+        <FormTitle>Welcome back!</FormTitle>
+        <FormInputGroup className="mb-2">
+          <FormInputLabel htmlFor="email">email</FormInputLabel>
+          <FormInput type="text" name="email" />
+        </FormInputGroup>
+        <FormInputGroup className="mb-4">
+          <FormInputLabel htmlFor="password">password</FormInputLabel>
+          <FormInput type="password" name="password" />
+        </FormInputGroup>
         <FormButton>Login</FormButton>
         <FormLink href={routes.Register}>Register an account</FormLink>
-      </LoginForm>
+      </FormLogin>
     </FormPageContainer>
   </>
 );

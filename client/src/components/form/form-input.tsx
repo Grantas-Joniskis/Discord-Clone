@@ -1,20 +1,20 @@
 import React from 'react';
-import './form-styles.css';
+import './styles/form-styles.css';
 
-type InputGroupProps = ChildrenProp & {
+type FormInputGroupProps = ChildrenProp & {
   className?: string,
 };
 
-type InputLabelProps = ChildrenProp & {
+type FormInputLabelProps = ChildrenProp & {
   htmlFor?: string,
 };
 
-type InputProps = {
+type FormInputProps = {
   type?: string,
   name?: string,
 };
 
-export const InputGroup: React.FC<InputGroupProps> = ({
+export const FormInputGroup: React.FC<FormInputGroupProps> = ({
   children,
   className = '',
 }) => (
@@ -23,14 +23,14 @@ export const InputGroup: React.FC<InputGroupProps> = ({
   </div>
 );
 
-export const InputLabel: React.FC<InputLabelProps> = ({
+export const FormInputLabel: React.FC<FormInputLabelProps> = ({
   children,
   htmlFor = '',
 }) => (
   <label className="form-label form-label text-uppercase mb-1" htmlFor={htmlFor}>{children}</label>
 );
 
-export const Input: React.FC<InputProps> = ({
+export const FormInput: React.FC<FormInputProps> = ({
   type = 'text',
   name = '',
 }) => (

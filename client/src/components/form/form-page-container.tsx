@@ -1,5 +1,5 @@
 import React from 'react';
-import './form-styles.css';
+import './styles/form-styles.css';
 
 const FormPageContainer: React.FC<ChildrenProp> = ({
   children,

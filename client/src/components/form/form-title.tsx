@@ -1,10 +1,10 @@
 import React from 'react';
-import './form-styles.css';
+import './styles/form-styles.css';
 
-const Title: React.FC<ChildrenProp> = ({
+const FormTitle: React.FC<ChildrenProp> = ({
   children,
 }) => (
   <h1 className="display-6 text-center mb-3 form-title">{children}</h1>
 );
 
-export default Title;
+export default FormTitle;
