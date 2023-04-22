@@ -1,10 +1,16 @@
 /* { USER LIST SECTION } */
 .user-list {
-  width: 15%;
+  width: 20%;
+  height: 100vh;
 }
 
 /* { USER LIST TITLE } */
 .user-list-title {
   font-size: 13px;
   font-weight: bold;
+}
+
+/* { LIST USER } */
+.list-user-pfp {
+  width: 35px;
 }

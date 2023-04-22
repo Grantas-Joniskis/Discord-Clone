@@ -31,7 +31,6 @@ class AxiosService {
   }
 
   public static getUsers() {
-    console.log(CurrentUser.getToken());
     return AxiosService.api.get(routes.Users, {
       headers: {
         Authorization: `Bearer ${CurrentUser.getToken()}`,

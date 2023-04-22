@@ -1,19 +1,17 @@
 class CurrentUser {
-  private static token: string;
+  private static token: string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsImlhdCI6MTY4MjE3MTU0NCwiZXhwIjoxNjgyMTgyMzQ0fQ.aSmp_Oi1uTjAU8weqPLvrgsCqZQdy4uQrfmO3xmMQhE';
 
-  private static id: number;
+  private static id: number = 18;
 
-  private static username: string;
+  private static username: string = 'Test';
 
   public static create(token: string, id: number, username: string): void {
-    console.log(CurrentUser.token);
     CurrentUser.token = token;
     CurrentUser.id = id;
     CurrentUser.username = username;
   }
 
   public static getToken(): string {
-    console.log(CurrentUser.token);
     return CurrentUser.token;
   }
 

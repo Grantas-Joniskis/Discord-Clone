@@ -1,10 +1,12 @@
 import { FormEvent } from 'react';
-import routes from 'navigation/routes';
 import AxiosService from 'services/axios/axios-service';
 import validateRegisterInput from 'validation/register-form-validation';
 import RegisterUser from 'types/register-user';
 
-const handleRegister = async (event: FormEvent<HTMLFormElement>): Promise<void> => {
+const handleRegister = async (
+  event: FormEvent<HTMLFormElement>,
+  setCompleted: React.Dispatch<React.SetStateAction<boolean>>,
+): Promise<void> => {
   event.preventDefault();
 
   const formData = new FormData(event.currentTarget);
@@ -20,13 +22,11 @@ const handleRegister = async (event: FormEvent<HTMLFormElement>): Promise<void> 
   try {
     const response = AxiosService.postRegisterUser(registerUser);
     console.log('Response:', response);
+
+    setCompleted(true);
   } catch (error) {
     console.error('Error:', error);
-    return;
   }
-
-  // DIRTY AF
-  window.location.assign(routes.Login);
 };
 
 export default handleRegister;
