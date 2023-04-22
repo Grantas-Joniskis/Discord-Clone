@@ -1,3 +1,4 @@
+import routes from 'navigation/routes';
 import { FormEvent } from 'react';
 import AxiosService from 'services/axios/axios-service';
 import SocketioService from 'services/socketio/socketio-service';
@@ -20,6 +21,9 @@ const handleLogin = async (event: FormEvent<HTMLFormElement>): Promise<void> => 
     const response = await AxiosService.postLoginUser(loginUser);
     SocketioService.createConnection(response.data.bearer);
     console.log('Response:', response);
+
+    // DIRTY AF
+    window.location.assign(routes.Chat);
   } catch (error) {
     console.error('Error:', error);
   }

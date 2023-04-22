@@ -15,14 +15,10 @@ class AxiosService {
   });
 
   public static async postRegisterUser(registerUser: RegisterUser) {
-    AxiosService.api.post(routes.Register, {
+    return AxiosService.api.post(routes.Register, {
       email: registerUser.email,
       username: registerUser.username,
       password: registerUser.password,
-    }).then((response) => {
-      console.log(response);
-    }).catch((error) => {
-      console.log(error);
     });
   }
 
@@ -30,6 +26,14 @@ class AxiosService {
     return AxiosService.api.post(routes.Login, {
       email: loginUser.email,
       password: loginUser.password,
+    });
+  }
+
+  public static getUsers(token: string) {
+    return AxiosService.api.get(routes.Users, {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
     });
   }
 }

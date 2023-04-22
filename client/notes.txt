@@ -37,7 +37,16 @@ PLAN:
 - 24th Study the back-end code prepare for presentation.
 
 
- ACCOUNTS:
-  - test@test.com 
-  - Test
-  - Test123123
+ACCOUNTS:
+  1.
+    - test@test.com 
+    - Test
+    - Test123123
+  2.
+    - avale@test.com
+    - Avale
+    - Avale123123
+  3. 
+    - grant@test.com
+    - Grant
+    - Grant123123
