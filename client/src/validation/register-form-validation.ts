@@ -1,3 +1,5 @@
+import RegisterUser from 'types/register-user';
+
 const validateRegisterInput = (registerUser: RegisterUser): boolean => {
   const { email, username, password } = registerUser;
 

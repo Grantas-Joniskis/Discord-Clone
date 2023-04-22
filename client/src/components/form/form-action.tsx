@@ -1,9 +1,6 @@
 import React from 'react';
 import './styles/form-styles.css';
-
-type FormLinkProps = ChildrenProp & {
-  href: string,
-};
+import FormLinkProps from 'types/form/form-link';
 
 export const FormButton: React.FC<ChildrenProp> = ({
   children,

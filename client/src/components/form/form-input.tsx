@@ -1,18 +1,8 @@
 import React from 'react';
 import './styles/form-styles.css';
-
-type FormInputGroupProps = ChildrenProp & {
-  className?: string,
-};
-
-type FormInputLabelProps = ChildrenProp & {
-  htmlFor?: string,
-};
-
-type FormInputProps = {
-  type?: string,
-  name?: string,
-};
+import FormInputGroupProps from 'types/form/form-input-groups';
+import FormInputLabelProps from 'types/form/form-input-label';
+import FormInputProps from 'types/form/form-input';
 
 export const FormInputGroup: React.FC<FormInputGroupProps> = ({
   children,

@@ -2,6 +2,7 @@ import { FormEvent } from 'react';
 import routes from 'navigation/routes';
 import AxiosService from 'services/axios/axios-service';
 import validateRegisterInput from 'validation/register-form-validation';
+import RegisterUser from 'types/register-user';
 
 const handleRegister = async (event: FormEvent<HTMLFormElement>): Promise<void> => {
   event.preventDefault();

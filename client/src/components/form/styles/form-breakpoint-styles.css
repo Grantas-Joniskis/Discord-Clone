@@ -2,40 +2,40 @@
 @media screen and (min-width: 768px) {
 
   .discord-logo {
-    position: relative;
-    top: -65px;
+    position: relative !important;
+    top: -65px !important;
   }
 
   .discord-white-logo {
-    width: 100px;
+    width: 100px  !important; 
   }
 
   .discord-text-logo {
-    width: 300px;
+    width: 300px !important; 
   }
 
   .form-title {
-    font-size: 38px;
+    font-size: 38px !important;
   }
 
   .form-input {
-    height: 42px;
+    height: 42px !important;
   }
 
   .form-button {
-    padding: 10px;
+    padding: 10px !important;
   }
 
   .form-link {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 
   .form-link:hover {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 
   .form-link:focus {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 
 }

@@ -1,6 +1,8 @@
 import axios from 'axios';
 import config from 'config/config';
 import routes from 'navigation/routes';
+import LoginUser from 'types/login-user';
+import RegisterUser from 'types/register-user';
 
 const api = axios.create({
   baseURL: `${config.server.protocol}://${config.server.domain}:${config.server.port}`,

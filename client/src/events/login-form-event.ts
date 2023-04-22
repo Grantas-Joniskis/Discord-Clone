@@ -1,5 +1,6 @@
 import { FormEvent } from 'react';
 import AxiosService from 'services/axios/axios-service';
+import LoginUser from 'types/login-user';
 import validateLoginInput from 'validation/login-form-validation';
 
 const handleLogin = async (event: FormEvent<HTMLFormElement>): Promise<void> => {
