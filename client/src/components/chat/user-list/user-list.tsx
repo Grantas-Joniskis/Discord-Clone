@@ -1,12 +1,13 @@
 import React from 'react';
-import './user-list-style.css';
+import AxiosService from 'services/axios/axios-service';
 
-const UerList: React.FC<ChildrenProp> = ({
-  children,
-}) => (
-  <div className="user-list bg-light px-2 py-1">
-    {children}
-  </div>
-);
+const UserList = () => {
+  const userList = AxiosService.getUsers();
+  console.log(userList);
 
-export default UerList;
+  return (
+    <div />
+  );
+};
+
+export default UserList;

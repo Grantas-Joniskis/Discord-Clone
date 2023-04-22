@@ -3,6 +3,7 @@ import config from 'config/config';
 import routes from 'navigation/routes';
 import LoginUser from 'types/login-user';
 import RegisterUser from 'types/register-user';
+import CurrentUser from 'user/CurrentUser';
 
 class AxiosService {
   private static api = axios.create({
@@ -29,10 +30,11 @@ class AxiosService {
     });
   }
 
-  public static getUsers(token: string) {
+  public static getUsers() {
+    console.log(CurrentUser.getToken());
     return AxiosService.api.get(routes.Users, {
       headers: {
-        Authorization: `Bearer ${token}`,
+        Authorization: `Bearer ${CurrentUser.getToken()}`,
       },
     });
   }

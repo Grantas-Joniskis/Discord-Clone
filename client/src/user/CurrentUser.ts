@@ -6,12 +6,14 @@ class CurrentUser {
   private static username: string;
 
   public static create(token: string, id: number, username: string): void {
+    console.log(CurrentUser.token);
     CurrentUser.token = token;
     CurrentUser.id = id;
     CurrentUser.username = username;
   }
 
   public static getToken(): string {
+    console.log(CurrentUser.token);
     return CurrentUser.token;
   }
 
