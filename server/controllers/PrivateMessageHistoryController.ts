@@ -6,8 +6,13 @@ import IControllerGetExtension from "../core/class/http-controller/IControllerGe
 import RequestHelper from "../core/class/helpers/RequestHelper";
 import Joi from "joi";
 
+/**
+ * Controller to get privates messages history
+ */
 class PrivateMessageHistoryController extends BaseController implements IControllerGetExtension {
     async get(data: DataBag, request: e.Request, response: e.Response): Promise<void> {
+        // http body parameters validation
+
         const schema = Joi.object<{id: number, page: number}>({
             id: Joi.number()
                 .required(),
@@ -16,10 +21,12 @@ class PrivateMessageHistoryController extends BaseController implements IControl
                 .required(),
         })
         const joiValidation = schema.validate(request.params)
+        // Throw an 403 error if the validation is not successful
         RequestHelper.HandleJoiValidation(joiValidation);
 
         const params = joiValidation.value as {id: number, page: number};
 
+        // Fetch the database, and order them by date
         const messages = await this.prismaClient.privateMessage.findMany(
             {
                 where: {
