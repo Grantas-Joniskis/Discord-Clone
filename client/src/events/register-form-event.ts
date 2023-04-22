@@ -1,7 +1,7 @@
 import { FormEvent } from 'react';
-import AxiosService from 'services/axios/axios-service';
+import AxiosService from 'services/axios-service';
+import RegisterUser from 'types/form/register-user';
 import validateRegisterInput from 'validation/register-form-validation';
-import RegisterUser from 'types/register-user';
 
 const handleRegister = async (
   event: FormEvent<HTMLFormElement>,

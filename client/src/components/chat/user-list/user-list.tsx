@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import AxiosService from 'services/axios/axios-service';
+import AxiosService from 'services/axios-service';
 import User from 'types/user';
 import UserListCard from './user-list-card';
 
