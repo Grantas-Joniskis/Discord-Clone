@@ -52,7 +52,7 @@ class LoginController extends BaseController implements IControllerPostExtension
             user: {
                 id: user.id,
                 email: user.email,
-                username: user.name,
+                username: user.username,
             }
         })
     }

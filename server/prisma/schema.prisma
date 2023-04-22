@@ -14,7 +14,7 @@ datasource db {
 model User {
   id       Int       @id @default(autoincrement()) @db.UnsignedInt
   email    String    @unique
-  name     String    @unique
+  username     String    @unique
   password String    @db.Text
   sentPrivateMessages PrivateMessage[] @relation("sentPrivateMessages")
   receivedPrivateMessage PrivateMessage[] @relation("receivedPrivateMessage")

@@ -32,7 +32,7 @@ class LoginController extends BaseController implements IControllerPostExtension
             await this.prismaClient.user.create({
                 data: {
                     email: credentials.email,
-                    name: credentials.username,
+                    username: credentials.username,
                     password: hashedPassword,
                 }
             })
