@@ -1,14 +1,23 @@
-class CurrentUser {
-  private static token: string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTgsImlhdCI6MTY4MjE3MTU0NCwiZXhwIjoxNjgyMTgyMzQ0fQ.aSmp_Oi1uTjAU8weqPLvrgsCqZQdy4uQrfmO3xmMQhE';
+import User from 'types/user';
 
-  private static id: number = 18;
+class CurrentUser {
+  private static token: string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgyMTc1NjAyLCJleHAiOjE2ODIxODY0MDJ9.KVIfzw1Tm1AQ2gauSgMAo1SA_Q_ck9lNmR79u-gN2nE';
+
+  private static id: number = 1;
 
   private static username: string = 'Test';
 
+  private static receiver: User | undefined;
+
   public static create(token: string, id: number, username: string): void {
+    CurrentUser.receiver = undefined;
     CurrentUser.token = token;
     CurrentUser.id = id;
     CurrentUser.username = username;
+  }
+
+  public static setReceiver(receiver: User) {
+    CurrentUser.receiver = receiver;
   }
 
   public static getToken(): string {
@@ -21,6 +30,10 @@ class CurrentUser {
 
   public static getUsername(): string {
     return CurrentUser.username;
+  }
+
+  public static getReceiver(): User | undefined {
+    return CurrentUser.receiver;
   }
 }
 

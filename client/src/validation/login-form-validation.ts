@@ -1,4 +1,4 @@
-import LoginUser from 'types/login-user';
+import LoginUser from 'types/form/login-user';
 
 const validateLoginInput = (loginUser: LoginUser): boolean => {
   const { email, password } = loginUser;

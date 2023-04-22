@@ -1,16 +1,24 @@
 /* { USER LIST SECTION } */
 .user-list {
-  width: 20%;
+  width: 100%;
+  max-width: 250px;
   height: 100vh;
 }
 
 /* { USER LIST TITLE } */
 .user-list-title {
-  font-size: 13px;
+  font-size: 11px;
   font-weight: bold;
+}
+
+/* { USER LIST CARD } */
+.user-list-card:hover {
+  transition: linear 150ms;
+  background-color: gray;
 }
 
 /* { LIST USER } */
 .list-user-pfp {
-  width: 35px;
+  width: 30px;
+  height: 30px;
 }

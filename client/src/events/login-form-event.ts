@@ -1,7 +1,7 @@
 import { FormEvent } from 'react';
 import AxiosService from 'services/axios/axios-service';
 import SocketioService from 'services/socketio/socketio-service';
-import LoginUser from 'types/login-user';
+import LoginUser from 'types/form/login-user';
 import CurrentUser from 'user/CurrentUser';
 import validateLoginInput from 'validation/login-form-validation';
 

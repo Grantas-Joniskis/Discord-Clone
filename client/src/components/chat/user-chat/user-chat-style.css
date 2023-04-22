@@ -1,0 +1,7 @@
+/* { USER CHAT SECTION } */
+.user-chat-section {
+  background-color: rgb(221, 221, 221);
+  width: 100%;
+  max-width: 65vw;
+  height: 100vh;
+}

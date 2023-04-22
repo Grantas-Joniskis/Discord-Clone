@@ -1,7 +1,7 @@
 import axios from 'axios';
 import config from 'config/config';
 import routes from 'navigation/routes';
-import LoginUser from 'types/login-user';
+import LoginUser from 'types/form/login-user';
 import RegisterUser from 'types/register-user';
 import CurrentUser from 'user/CurrentUser';
 

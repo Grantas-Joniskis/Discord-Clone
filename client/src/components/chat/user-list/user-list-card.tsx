@@ -1,19 +1,16 @@
 import React from 'react';
 import './user-list-style.css';
 import UserListCardProps from 'types/chat/list-user-card';
+import handleUserListCardClick from 'events/user-list-card-event';
 import defaultDiscordPfp from '../../../images/discord-default-pfp.jpg';
 
 const UserListCard: React.FC<UserListCardProps> = ({
-  listUser,
-}) => {
-  console.log(listUser);
-  return (
-    <div>
-      <img className="rounded-circle list-user-pfp" src={defaultDiscordPfp} alt="default discord logo" />
-      <br />
-      <p className="text-dark">{listUser.username}</p>
-    </div>
-  );
-};
+  user,
+}) => (
+  <div className="d-flex align-items-center mb-2 p-1 user-list-card" onClick={() => handleUserListCardClick(user)}>
+    <img className="rounded-circle list-user-pfp me-2" src={defaultDiscordPfp} alt="default discord logo" />
+    <p className="text-dark mb-0">{user.username}</p>
+  </div>
+);
 
 export default UserListCard;

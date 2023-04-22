@@ -50,3 +50,7 @@ ACCOUNTS:
     - grant@test.com
     - Grant
     - Grant123123
+  4.
+   - friend@test.com
+   - Friend 
+   - Friend123123

@@ -1,7 +1,7 @@
-import ListUserProps from './list-user';
+import User from '../user';
 
 type UserListCardProps = {
-  listUser: ListUserProps;
+  user: User;
 };
 
 export default UserListCardProps;

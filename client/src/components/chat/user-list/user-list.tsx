@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import AxiosService from 'services/axios/axios-service';
-import ListUserProps from 'types/chat/list-user';
+import User from 'types/user';
 import UserListCard from './user-list-card';
 
 const UserList = () => {
-  const [userList, setUserList] = useState<ListUserProps[]>([]);
+  const [userList, setUserList] = useState<User[]>([]);
 
   useEffect(() => {
     const fetchUsers = async () => {
@@ -18,7 +18,7 @@ const UserList = () => {
   return (
     <div>
       {userList.map((user) => (
-        <UserListCard key={user.id} listUser={user} />
+        <UserListCard key={user.id} user={user} />
       ))}
     </div>
   );
