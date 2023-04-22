@@ -1,5 +1,6 @@
 import { FormEvent } from 'react';
 import AxiosService from 'services/axios/axios-service';
+import SocketioService from 'services/socketio/socketio-service';
 import LoginUser from 'types/login-user';
 import validateLoginInput from 'validation/login-form-validation';
 
@@ -16,7 +17,8 @@ const handleLogin = async (event: FormEvent<HTMLFormElement>): Promise<void> => 
   if (!validateLoginInput(loginUser)) return;
 
   try {
-    const response = AxiosService.postLoginUser(loginUser);
+    const response = await AxiosService.postLoginUser(loginUser);
+    SocketioService.createConnection(response.data.bearer);
     console.log('Response:', response);
   } catch (error) {
     console.error('Error:', error);

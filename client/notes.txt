@@ -35,3 +35,9 @@ PLAN:
 - 22nd Design the main chat page. Refactor the code.
 - 23rd If enough time, create extra functionallity for updating user data.
 - 24th Study the back-end code prepare for presentation.
+
+
+ ACCOUNTS:
+  - test@test.com 
+  - Test
+  - Test123123
