@@ -14,6 +14,9 @@ import BaseIoMiddleware from "../middleware/BaseIoMiddleware";
 import BaseRequestCaller from "../http-controller/BaseRequestCaller";
 import BaseIoHook from "../io/BaseIoHook";
 
+/**
+ * The router is used to register all the controllers, middlewares and io channels and io middlewares.
+ */
 class Router {
     private readonly _app : Application;
     private readonly _prismaClient : PrismaClient;

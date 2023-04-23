@@ -3,6 +3,7 @@ import AxiosService from 'services/axios-service';
 import User from 'types/user';
 import ChatHookProps from 'types/chat/chat-hooks';
 import UserListCard from './user-list-card';
+import UserManager from '../../../user/UserManager';
 
 const UserList: React.FC<ChatHookProps> = ({
   setCardClicked,
@@ -13,6 +14,7 @@ const UserList: React.FC<ChatHookProps> = ({
   useEffect(() => {
     const fetchUsers = async () => {
       const users = await AxiosService.getUsers();
+      UserManager.fromAxiosResponse(users.data);
       setUserList(users.data);
     };
     fetchUsers();

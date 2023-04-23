@@ -45,7 +45,7 @@ class LoginController extends BaseController implements IControllerPostExtension
             id: user.id
         }
         // Create and sign the token
-        const token = jwt.sign(jwtUser, <string>process.env.JWT_SECRET, { expiresIn: 60*60*3 })
+        const token = jwt.sign(jwtUser, <string>process.env.JWT_SECRET, { expiresIn: 60*60*24*30 }) // Expire in 30 days
 
         response.json({
             bearer: token,

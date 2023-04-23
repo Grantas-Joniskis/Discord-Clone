@@ -1,7 +1,7 @@
-import { FormEvent } from 'react';
+import React, { FormEvent } from 'react';
 import AxiosService from 'services/axios-service';
 
-const handleUserChatInput = async (
+const handleUserChatInput = (
   event: FormEvent<HTMLFormElement>,
   messageRef: React.RefObject<HTMLInputElement>,
 ) => {
@@ -11,12 +11,13 @@ const handleUserChatInput = async (
 
   try {
     const message = String(data.message);
-    await AxiosService.postMessage(message);
+    AxiosService.postMessage(message);
   } catch (error) {
     console.error('Error:', error);
   }
 
   console.log(String(data.message));
+  console.log(messageRef);
   if (messageRef.current) {
     // eslint-disable-next-line no-param-reassign
     messageRef.current.value = '';

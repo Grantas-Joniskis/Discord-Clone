@@ -45,6 +45,15 @@ class AxiosService {
     );
   }
 
+  public static getMessagesHistory(userId: number) {
+    const link = `/private-message/${userId}/1`; // 1 = page
+    return AxiosService.api.get(link, {
+      headers: {
+        Authorization: `Bearer ${CurrentUser.getToken()}`,
+      },
+    });
+  }
+
   public static getUsers() {
     return AxiosService.api.get(routes.Users, {
       headers: {

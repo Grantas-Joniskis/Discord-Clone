@@ -14,10 +14,8 @@ const handleLogin = async (
   const formData = new FormData(event.currentTarget);
   const data = Object.fromEntries(formData.entries());
   const loginUser: LoginUser = {
-    // email: String(data.email),
-    // password: String(data.password),
-    email: 'grant@test.com',
-    password: 'Grant123123',
+    email: String(data.email),
+    password: String(data.password),
   };
 
   if (!validateLoginInput(loginUser)) return;
