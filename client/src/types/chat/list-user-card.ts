@@ -1,6 +1,7 @@
 import User from '../user';
+import ChatHookProps from './chat-hooks';
 
-type UserListCardProps = {
+type UserListCardProps = ChatHookProps & {
   user: User;
 };
 

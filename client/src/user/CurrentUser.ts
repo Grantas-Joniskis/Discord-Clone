@@ -1,7 +1,7 @@
 import User from 'types/user';
 
 class CurrentUser {
-  private static token: string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgyMTc1NjAyLCJleHAiOjE2ODIxODY0MDJ9.KVIfzw1Tm1AQ2gauSgMAo1SA_Q_ck9lNmR79u-gN2nE';
+  private static token: string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgyMjYxOTc1LCJleHAiOjE2ODIyNzI3NzV9.6nNYhcI0ZRI8cTXGiXs-T4bGWs0WJZMZw5EyNBRtLZM';
 
   private static id: number = 1;
 

@@ -12,9 +12,14 @@
 }
 
 /* { USER LIST CARD } */
+
+.user-list-card-active {
+  background-color: gray;
+}
+
 .user-list-card:hover {
   transition: linear 150ms;
-  background-color: gray;
+  background-color: #ADADAD;
 }
 
 /* { LIST USER } */

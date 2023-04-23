@@ -5,3 +5,14 @@
   max-width: 65vw;
   height: 100vh;
 }
+
+/* { USER CHAT INPUT } */
+.user-chat-input {
+  width: 90%;
+  height: 40px;
+}
+
+.user-chat-button {
+  width: 10%;
+  height: 40px;
+}

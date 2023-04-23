@@ -16,7 +16,7 @@ const router = createBrowserRouter(
       element: <LoginPage />,
     },
     {
-      path: routes.Chat,
+      path: routes.SingleChat,
       element: <ChatPage />,
     },
   ],

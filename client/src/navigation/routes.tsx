@@ -3,7 +3,9 @@ const routes = {
   Login: '/login',
   Chat: '/chat',
   Users: '/users',
+  User: '/user',
   TestPostFrom: '/testpostform',
+  SingleChat: 'chat/user/:id',
 };
 
 export default routes;

@@ -10,7 +10,7 @@ export const FormLogin: React.FC<ChildrenProp> = ({
   const [completed, setCompleted] = React.useState(false);
   const navigate = useNavigate();
   React.useEffect(() => {
-    if (completed) navigate(routes.Chat);
+    if (completed) navigate(`${routes.Chat}${routes.User}/0`);
   }, [completed, navigate]);
 
   return (

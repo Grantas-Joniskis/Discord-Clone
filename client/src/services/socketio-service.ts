@@ -8,6 +8,10 @@ class SocketioService {
     SocketioService.setupIoConnection();
   }
 
+  public static getSocket(): Socket | undefined {
+    return SocketioService.ioConnection;
+  }
+
   private static setupIoConnection() {
     SocketioService.connect();
     SocketioService.disconnect();

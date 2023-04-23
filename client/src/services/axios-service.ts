@@ -30,6 +30,21 @@ class AxiosService {
     });
   }
 
+  public static postMessage(message: string) {
+    const link = `/private-message/${CurrentUser.getReceiver()?.id}`;
+    return AxiosService.api.post(
+      link,
+      {
+        text: message,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${CurrentUser.getToken()}`,
+        },
+      },
+    );
+  }
+
   public static getUsers() {
     return AxiosService.api.get(routes.Users, {
       headers: {
