@@ -1,4 +1,4 @@
-import UserChat from 'components/chat/user-chat';
+import UserChat from 'components/chat/user-chat/user-chat';
 import UserChatInput from 'components/chat/user-chat/user-chat-input';
 import UserChatSection from 'components/chat/user-chat/user-chat-section';
 import UserChatTitle from 'components/chat/user-chat/user-chat-title';
@@ -7,18 +7,19 @@ import UserListSection from 'components/chat/user-list/user-list-section';
 import UserListTitle from 'components/chat/user-list/user-list-title';
 import routes from 'navigation/routes';
 import React from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import SocketioService from 'services/socketio-service';
 import CurrentUser from 'user/CurrentUser';
-import defaultDiscordPfp from '../images/discord-default-pfp.jpg';
-import UserManager from '../user/UserManager';
+import UserChatMessages from 'components/chat/user-chat/user-chat-messages';
 import AxiosService from '../services/axios-service';
 
 const ChatPage = () => {
-  const { id: userId } = useParams();
+  // const { id: userId } = useParams();
   const [cardClicked, setCardClicked] = React.useState(false);
   const navigate = useNavigate();
-  const [messages, setMessages] = React.useState(new Array<{ from: number, to: number, text: string }>());
+  const [messages, setMessages] = React.useState(
+    new Array<{ from: number, to: number, text: string }>(),
+  );
   React.useEffect(() => {
     if (cardClicked) {
       setCardClicked(false);
@@ -74,28 +75,14 @@ const ChatPage = () => {
   }, [cardClicked]);
 
   return (
-    <UserChat setCardClicked={setCardClicked} userId={Number(userId)}>
-      <UserListSection setCardClicked={setCardClicked} userId={Number(userId)}>
+    <UserChat>
+      <UserListSection>
         <UserListTitle>direct messages</UserListTitle>
-        <UserList setCardClicked={setCardClicked} userId={Number(userId)} />
+        <UserList setCardClicked={setCardClicked} />
       </UserListSection>
       <UserChatSection>
         <UserChatTitle />
-        <div className="h-100" style={{ overflowY: 'auto' }}>
-          {messages.map((message, index) => (
-            // eslint-disable-next-line react/no-array-index-key
-            <div className="rounded-3 px-2 d-flex" key={index}>
-              <div>
-                <img className="rounded-circle list-user-pfp me-2" src={defaultDiscordPfp} alt="default discord logo" />
-              </div>
-              <div>
-                <h3 className="h6">{message.from === CurrentUser.getId() ? CurrentUser.getUsername() : UserManager.getUserFromId(message.from)?.username ?? 'Unknown user'}</h3>
-                {message.text}
-              </div>
-
-            </div>
-          ))}
-        </div>
+        <UserChatMessages messages={messages} />
         <UserChatInput />
       </UserChatSection>
     </UserChat>

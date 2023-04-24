@@ -1,8 +1,7 @@
 import React from 'react';
 import './user-list-style.css';
-import ChatHookProps from 'types/chat/chat-hooks';
 
-const UerList: React.FC<ChatHookProps> = ({
+const UerList: React.FC<ChildrenProp> = ({
   children,
 }) => (
   <div className="user-list bg-light px-2 py-1">

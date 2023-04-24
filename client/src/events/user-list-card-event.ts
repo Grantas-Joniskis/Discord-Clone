@@ -1,4 +1,3 @@
-import SocketioService from 'services/socketio-service';
 import User from 'types/user';
 import CurrentUser from 'user/CurrentUser';
 

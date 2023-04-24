@@ -1,7 +1,7 @@
 import User from '../user';
-import ChatHookProps from './chat-hooks';
 
-type UserListCardProps = ChatHookProps & {
+type UserListCardProps = {
+  setCardClicked: React.Dispatch<React.SetStateAction<boolean>>
   user: User;
 };
 

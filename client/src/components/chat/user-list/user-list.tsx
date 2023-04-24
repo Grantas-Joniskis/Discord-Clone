@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import AxiosService from 'services/axios-service';
 import User from 'types/user';
-import ChatHookProps from 'types/chat/chat-hooks';
+import UserListProps from 'types/chat/user-list';
 import UserListCard from './user-list-card';
 import UserManager from '../../../user/UserManager';
 
-const UserList: React.FC<ChatHookProps> = ({
+const UserList: React.FC<UserListProps> = ({
   setCardClicked,
-  userId,
 }) => {
   const [userList, setUserList] = useState<User[]>([]);
 
@@ -23,7 +22,7 @@ const UserList: React.FC<ChatHookProps> = ({
   return (
     <div>
       {userList.map((user) => (
-        <UserListCard key={user.id} user={user} setCardClicked={setCardClicked} userId={userId} />
+        <UserListCard key={user.id} user={user} setCardClicked={setCardClicked} />
       ))}
     </div>
   );

@@ -1,7 +1,6 @@
 import React from 'react';
-import ChatHookProps from 'types/chat/chat-hooks';
 
-const UserChat: React.FC<ChatHookProps> = ({
+const UserChat: React.FC<ChildrenProp> = ({
   children,
 }) => (
   <div className="d-flex">{children}</div>

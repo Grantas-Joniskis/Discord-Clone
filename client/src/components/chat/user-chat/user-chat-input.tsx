@@ -9,7 +9,6 @@ const UserChatInput = () => {
     <div>
       <form onSubmit={(e) => handleUserChatInput(e, messageRef)}>
         <input className="rounded user-chat-input px-1" type="text" placeholder="Message" name="message" ref={messageRef} />
-        <button className="rounded user-chat-button" type="submit">Submit</button>
       </form>
     </div>
   );
