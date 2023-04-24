@@ -7,6 +7,12 @@ import BadRequestException from "../core/class/http-exceptions/BadRequestExcepti
 import {JwtUser} from "../types/JwtUser";
 import NotFoundRequestException from "../core/class/http-exceptions/NotFoundRequestException";
 
+/**
+ * Core middleware, populate the databag with a user from the database if the token is valid, and if the user still
+ * exist in the database.
+ *
+ * If the token is invalid, or the user do not exist anymore, the request is stopped
+ */
 class SecurityHttpMiddleware extends BaseHttpMiddleware {
     async handle(data: DataBag, request: e.Request, response: e.Response): Promise<boolean> {
         const auth = request.header("authorization")

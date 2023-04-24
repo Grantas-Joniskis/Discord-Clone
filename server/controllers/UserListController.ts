@@ -6,6 +6,7 @@ import {User} from "@prisma/client";
 
 class UserListController extends BaseController implements IControllerGetExtension {
     async get(data: DataBag, request: e.Request, response: e.Response): Promise<void> {
+        // Get users from database
         const users = await this.prismaClient.user.findMany({
             select: {id: true, username: true},
             where: {

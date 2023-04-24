@@ -8,6 +8,7 @@ import {JwtUser} from "../types/JwtUser";
 
 class UserListController extends BaseController implements IControllerGetExtension {
     async get(data: DataBag, request: e.Request, response: e.Response): Promise<void> {
+        // Body schema request validation
         const schemaSendMessage = Joi.object<{user: number}>({
             user: Joi.number()
                 .required(),
@@ -18,6 +19,7 @@ class UserListController extends BaseController implements IControllerGetExtensi
 
         const sockets = await this.io.fetchSockets();
 
+        // Iterate over all socket to find the right id. If not socket can be found, the user is offline
         for (const socket of sockets) {
             if (socket.data.user === undefined)
                 continue;

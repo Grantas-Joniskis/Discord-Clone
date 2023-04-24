@@ -27,6 +27,12 @@ class Router {
         this._io = io;
     }
 
+
+    /**
+     * Method to define internal members for controllers, io events, channels and middleware
+     * @param caller
+     * @private
+     */
     private initCallerMember(caller: BaseRequestCaller) {
         caller.setPrismaClient(this._prismaClient);
         caller.setIoServer(this._io);
@@ -55,6 +61,11 @@ class Router {
         controllerFunction(localDataRequest, request, response).catch(err => this.handleControllerException(err, request, response))
     }
 
+    /**
+     * Register a controller and its middlewares to use
+     * @param controller
+     * @param middlewares
+     */
     public registerController(controller: BaseController, middlewares: Array<BaseHttpMiddleware> = new Array<BaseHttpMiddleware>()){
         console.log("Register controller at path " + controller.getPath());
         this.initCallerMember(controller);
@@ -86,12 +97,22 @@ class Router {
         socket.emit("server-error", err.message);
     }
 
+    /**
+     * Register an IO hook
+     * @param ioHook
+     */
     public registerIoHook(ioHook: BaseIoHook) {
         this.initCallerMember(ioHook);
         this._io.on(ioHook.getEventName(), socket => {
             ioHook.handle(socket)
         })
     }
+
+    /**
+     * Register a chanel and its middlewares to use
+     * @param channel
+     * @param middlewares
+     */
     public registerChannel(channel: BaseChannel, middlewares: Array<BaseIoMiddleware> = new Array<BaseIoMiddleware>()) {
         console.log("Register channel : " + channel.getChannel());
         this.initCallerMember(channel);

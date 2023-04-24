@@ -9,6 +9,7 @@ import {JwtUser} from "../types/JwtUser";
 
 class SendMessageController extends BaseController implements IControllerPostExtension {
     async post(data: DataBag, request: e.Request, response: e.Response): Promise<void> {
+        // Body schema validation
         const schemaSendMessage = Joi.object<{to: number, text: string}>({
             to: Joi.number()
                 .required(),
@@ -39,6 +40,7 @@ class SendMessageController extends BaseController implements IControllerPostExt
                 content: schemaRequest.text
             }})
 
+        // Send 2 events through socket, one for the sender, and one for the receiver
         this.io.fetchSockets().then(sockets => {
             sockets.forEach(socket => {
                 if (socket.data.user === undefined) return;

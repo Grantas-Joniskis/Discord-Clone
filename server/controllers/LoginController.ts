@@ -10,7 +10,7 @@ import {JwtUser} from "../types/JwtUser";
 import DataBag from "../core/class/http-controller/DataBag";
 
 /**
- * Login controller, used when user wants to log in, provide a bearer jwt token, valid for 3 hours.
+ * Login controller, used when user wants to log in, provide a bearer jwt token, valid for 30 days.
  */
 class LoginController extends BaseController implements IControllerPostExtension {
     async post(data: DataBag, request: e.Request, response: e.Response) {

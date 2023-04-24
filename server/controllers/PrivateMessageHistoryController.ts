@@ -7,12 +7,11 @@ import RequestHelper from "../core/class/helpers/RequestHelper";
 import Joi from "joi";
 
 /**
- * Controller to get privates messages history
+ * Controller to get privates messages history, with pagination
  */
 class PrivateMessageHistoryController extends BaseController implements IControllerGetExtension {
     async get(data: DataBag, request: e.Request, response: e.Response): Promise<void> {
         // http body parameters validation
-
         const schema = Joi.object<{id: number, page: number}>({
             id: Joi.number()
                 .required(),

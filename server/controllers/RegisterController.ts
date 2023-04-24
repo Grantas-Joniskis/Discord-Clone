@@ -7,8 +7,14 @@ import bcrypt from "bcrypt";
 import DataBag from "../core/class/http-controller/DataBag";
 import {Prisma} from "@prisma/client";
 import BadRequestException from "../core/class/http-exceptions/BadRequestException";
-class LoginController extends BaseController implements IControllerPostExtension {
+
+/**
+ *
+ */
+class RegisterController extends BaseController implements IControllerPostExtension {
+
     async post(data: DataBag, request: e.Request, response: e.Response) {
+        // Body schema validation
         const schemaRegister = Joi.object({
             email: Joi.string()
                 .email()
@@ -26,8 +32,10 @@ class LoginController extends BaseController implements IControllerPostExtension
         const credentials = joiValidation.value;
 
 
+        // We hash the password, with rounds defined in the .env file
         const hashedPassword = bcrypt.hashSync(credentials.password, parseInt(process.env.BCRYPT_ROUND as string));
 
+        // Inserting inside the database
         try {
             await this.prismaClient.user.create({
                 data: {
@@ -36,7 +44,8 @@ class LoginController extends BaseController implements IControllerPostExtension
                     password: hashedPassword,
                 }
             })
-        }catch (e) {
+        } catch (e) {
+            // If known error, like not unique column, throw a nice error
             if (e instanceof Prisma.PrismaClientKnownRequestError) {
                 if (e.code == "P2002") {
                     if (e.meta?.target === "User_name_key") {
@@ -54,4 +63,4 @@ class LoginController extends BaseController implements IControllerPostExtension
     }
 }
 
-export default LoginController;
+export default RegisterController;
