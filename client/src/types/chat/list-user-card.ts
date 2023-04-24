@@ -1,4 +1,4 @@
-import User from '../user';
+import User from './user';
 
 type UserListCardProps = {
   setCardClicked: React.Dispatch<React.SetStateAction<boolean>>

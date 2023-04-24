@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import AxiosService from 'services/axios-service';
-import User from 'types/user';
 import UserListProps from 'types/chat/user-list';
 import UserListCard from './user-list-card';
 import UserManager from '../../../user/UserManager';

@@ -1,4 +1,3 @@
-import User from 'types/user';
 import CurrentUser from 'user/CurrentUser';
 
 const handleUserListCardClick = (

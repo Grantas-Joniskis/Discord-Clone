@@ -14,7 +14,6 @@ import UserChatMessages from 'components/chat/user-chat/user-chat-messages';
 import AxiosService from '../services/axios-service';
 
 const ChatPage = () => {
-  // const { id: userId } = useParams();
   const [cardClicked, setCardClicked] = React.useState(false);
   const navigate = useNavigate();
   const [messages, setMessages] = React.useState(

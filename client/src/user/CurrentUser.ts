@@ -1,11 +1,9 @@
-import User from 'types/user';
-
 class CurrentUser {
-  private static token: string = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgyMjYxOTc1LCJleHAiOjE2ODIyNzI3NzV9.6nNYhcI0ZRI8cTXGiXs-T4bGWs0WJZMZw5EyNBRtLZM';
+  private static token: string;
 
-  private static id: number = 1;
+  private static id: number;
 
-  private static username: string = 'Test';
+  private static username: string;
 
   private static receiver: User | undefined;
 
