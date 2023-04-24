@@ -6,7 +6,7 @@ import BaseRequestCaller from "../http-controller/BaseRequestCaller";
  * Base HTTP middleware, it will be called on every request where the middleware is registered on the router.
  */
 abstract class BaseHttpMiddleware extends BaseRequestCaller {
-    abstract handle(data: DataBag, request: DataBag, response: Response): Promise<boolean>;
+    abstract handle(data: DataBag, request: Request, response: Response): Promise<boolean>;
 }
 
 export default BaseHttpMiddleware;
