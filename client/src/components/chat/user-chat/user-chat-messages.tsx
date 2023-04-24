@@ -21,7 +21,7 @@ const UserChatMessages: React.FC<UserChatMessagesProps> = ({
   }, [messages]);
 
   return (
-    <div className="h-100" ref={messagesRef} style={{ overflowY: 'auto' }}>
+    <div className="h-100 mb-2" ref={messagesRef} style={{ overflowY: 'auto' }}>
       {messages.map((message, index) => (
       // eslint-disable-next-line react/no-array-index-key
         <div className="rounded-3 px-2 d-flex mb-3" key={index}>
