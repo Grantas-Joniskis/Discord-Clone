@@ -10,7 +10,7 @@ const UserListCard: React.FC<UserListCardProps> = ({
 }) => (
   <div className="d-flex align-items-center mb-2 p-1 user-list-card" onClick={() => handleUserListCardClick(user, setCardClicked)}>
     <img className="rounded-circle list-user-pfp me-2" src={defaultDiscordPfp} alt="default discord logo" />
-    <p className="text-dark mb-0">{user.username}</p>
+    <p className="mb-0 user-list-card-text">{user.username}</p>
   </div>
 );
 

@@ -1,0 +1,5 @@
+.user-card-section {
+  height: 100vh;
+  width: 25vw;
+  background-color: var(--discord-main);
+}

@@ -1,8 +1,16 @@
 :root {
   --discord-main: #23272A;
+  
   --discord-secondary: #2C2F33;
+  --discord-secondary-10: #414447;
+  --discord-secondary-20: #56595C;
+  --discord-secondary-30: #6B6D70;
+  
   --discord-text: #99AAB5;
+  --discord-text-light: #EBEEF0;
+  
   --discord-light: #ffffff;
+
   --discord-info: #7289DA;
   --discord-info-20: #5B6EAE;
   --discord-info-40: #506099;

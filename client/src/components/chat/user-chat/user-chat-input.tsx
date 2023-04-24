@@ -8,7 +8,7 @@ const UserChatInput = () => {
   return (
     <div>
       <form onSubmit={(e) => handleUserChatInput(e, messageRef)}>
-        <input className="rounded user-chat-input px-1" type="text" placeholder="Message" name="message" ref={messageRef} />
+        <input className="rounded px-3 user-chat-input" type="text" placeholder="Message" name="message" autoComplete="off" ref={messageRef} />
       </form>
     </div>
   );

@@ -1,15 +1,38 @@
 /* { USER CHAT SECTION } */
 .user-chat-section {
-  background-color: rgb(221, 221, 221);
+  background-color: var(--discord-secondary);
   width: 100%;
   max-width: 65vw;
   height: 100vh;
+}
+
+/* { USER CHAT TITLE } */
+.user-chat-title {
+  color: var(--discord-text-light);
+}
+
+/* { USER CHAT MESSAGE } */
+.user-chat-message-img {
+  width: 40px;
+  height: 40px;
+}
+
+.user-chat-message-text {
+  color: var(--discord-text-light);
 }
 
 /* { USER CHAT INPUT } */
 .user-chat-input {
   width: 100%;
   height: 40px;
+
+  border: none;
+  color: var(--discord-text-light);
+  background-color: var(--discord-secondary-10);
+}
+
+.user-chat-input:focus {
+  outline: none;
 }
 
 .user-chat-button {

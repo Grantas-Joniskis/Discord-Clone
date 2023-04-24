@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import SocketioService from 'services/socketio-service';
 import CurrentUser from 'user/CurrentUser';
 import UserChatMessages from 'components/chat/user-chat/user-chat-messages';
+import UserCardSection from 'components/chat/user-card/user-card-section';
 import AxiosService from '../services/axios-service';
 
 const ChatPage = () => {
@@ -41,27 +42,20 @@ const ChatPage = () => {
 
     // When sending message, notification from socket:
     function appendMessageMeAsSender(receiverId: number, text: string) {
-      console.log('userId ->', receiverId);
-      console.log('message ->', text);
       setMessages((oldArray) => [...oldArray, {
         from: CurrentUser.getId() ?? 0,
         to: receiverId,
         text,
       }]);
-      console.log(`length messages:${messages.length}`);
     }
 
     function appendMessageFriendAsSender(senderId: number, text: string) {
       if (senderId !== CurrentUser.getReceiver()?.id) return;
-      console.log('receive new message :)');
-      console.log('userId ->', senderId);
-      console.log('message ->', text);
       setMessages((oldArray) => [...oldArray, {
         from: senderId ?? 0,
         to: CurrentUser.getId() ?? 0,
         text,
       }]);
-      console.log(`length messages:${messages.length}`);
     }
 
     SocketioService.getSocket()?.on('sent-private-message', appendMessageMeAsSender);
@@ -76,7 +70,7 @@ const ChatPage = () => {
   return (
     <UserChat>
       <UserListSection>
-        <UserListTitle>direct messages</UserListTitle>
+        <UserListTitle>Direct Messages</UserListTitle>
         <UserList setCardClicked={setCardClicked} />
       </UserListSection>
       <UserChatSection>
@@ -84,6 +78,7 @@ const ChatPage = () => {
         <UserChatMessages messages={messages} />
         <UserChatInput />
       </UserChatSection>
+      <UserCardSection />
     </UserChat>
   );
 };
