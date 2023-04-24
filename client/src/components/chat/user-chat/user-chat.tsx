@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserChat: React.FC<ChildrenProp> = ({
+const UserChat: React.FC<ChildrenProps> = ({
   children,
 }) => (
   <div className="d-flex">{children}</div>

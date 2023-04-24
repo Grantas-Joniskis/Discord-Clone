@@ -1,4 +1,4 @@
-type ChildrenProp = {
+type ChildrenProps = {
   children: React.ReactNode,
 };
 

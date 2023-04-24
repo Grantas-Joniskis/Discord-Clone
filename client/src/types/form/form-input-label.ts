@@ -1,4 +1,4 @@
-type FormInputLabelProps = ChildrenProp & {
+type FormInputLabelProps = ChildrenProps & {
   htmlFor?: string,
 };
 

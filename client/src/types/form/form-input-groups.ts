@@ -1,4 +1,4 @@
-type FormInputGroupProps = ChildrenProp & {
+type FormInputGroupProps = ChildrenProps & {
   className?: string,
 };
 

@@ -5,14 +5,14 @@ class SocketioService {
 
   public static createConnection(token: string) {
     SocketioService.ioConnection = io('http://localhost:8889', { auth: { token } });
-    SocketioService.setupIoConnection();
+    SocketioService.setupConnection();
   }
 
   public static getSocket(): Socket | undefined {
     return SocketioService.ioConnection;
   }
 
-  private static setupIoConnection() {
+  private static setupConnection() {
     SocketioService.connect();
     SocketioService.disconnect();
   }

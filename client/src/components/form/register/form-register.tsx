@@ -4,7 +4,7 @@ import handleRegister from 'events/register-form-event';
 import { useNavigate } from 'react-router-dom';
 import routes from 'navigation/routes';
 
-export const FormRegister: React.FC<ChildrenProp> = ({
+export const FormRegister: React.FC<ChildrenProps> = ({
   children,
 }) => {
   const [completed, setCompleted] = React.useState(false);

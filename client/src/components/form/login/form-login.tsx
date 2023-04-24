@@ -4,7 +4,7 @@ import handleLogin from 'events/login-form-event';
 import routes from 'navigation/routes';
 import { useNavigate } from 'react-router-dom';
 
-export const FormLogin: React.FC<ChildrenProp> = ({
+export const FormLogin: React.FC<ChildrenProps> = ({
   children,
 }) => {
   const [completed, setCompleted] = React.useState(false);

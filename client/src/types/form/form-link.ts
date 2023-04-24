@@ -1,4 +1,4 @@
-type FormLinkProps = ChildrenProp & {
+type FormLinkProps = ChildrenProps & {
   href: string,
 };
 

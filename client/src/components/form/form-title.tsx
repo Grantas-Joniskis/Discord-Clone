@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/form-styles.css';
 
-const FormTitle: React.FC<ChildrenProp> = ({
+const FormTitle: React.FC<ChildrenProps> = ({
   children,
 }) => (
   <h1 className="display-6 text-center mb-3 form-title">{children}</h1>
