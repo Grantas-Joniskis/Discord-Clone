@@ -1,4 +1,4 @@
-import {Response} from "express";
+import {Response, Request} from "express";
 import DataBag from "../http-controller/DataBag";
 import BaseRequestCaller from "../http-controller/BaseRequestCaller";
 
