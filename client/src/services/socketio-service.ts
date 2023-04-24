@@ -1,10 +1,14 @@
+import config from 'config/config';
 import { Socket, io } from 'socket.io-client';
 
 class SocketioService {
   private static ioConnection: Socket | undefined;
 
   public static createConnection(token: string) {
-    SocketioService.ioConnection = io('http://localhost:8889', { auth: { token } });
+    SocketioService.ioConnection = io(
+      `${config.socket.protocol}://${config.socket.domain}:${config.socket.port}`,
+      { auth: { token } },
+    );
     SocketioService.setupConnection();
   }
 

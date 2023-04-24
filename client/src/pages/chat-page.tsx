@@ -16,10 +16,11 @@ import AxiosService from '../services/axios-service';
 
 const ChatPage = () => {
   const [cardClicked, setCardClicked] = React.useState(false);
-  const navigate = useNavigate();
   const [messages, setMessages] = React.useState(
     new Array<{ from: number, to: number, text: string }>(),
   );
+  const navigate = useNavigate();
+
   React.useEffect(() => {
     if (cardClicked) {
       setCardClicked(false);
@@ -29,6 +30,8 @@ const ChatPage = () => {
     console.log(CurrentUser.getReceiver()?.id);
 
     setMessages([]);
+
+    if (CurrentUser.getReceiver() === undefined) return () => {};
 
     AxiosService.getMessagesHistory(CurrentUser.getReceiver()?.id as number).then((response) => {
       response.data.reverse().forEach((message: any) => {
@@ -75,8 +78,15 @@ const ChatPage = () => {
       </UserListSection>
       <UserChatSection>
         <UserChatTitle />
-        <UserChatMessages messages={messages} />
-        <UserChatInput />
+        {/* DIRTY WAY BUT OK FOR NOW !! */}
+        {
+          CurrentUser.getReceiver() !== undefined && (
+            <>
+              <UserChatMessages messages={messages} />
+              <UserChatInput />
+            </>
+          )
+        }
       </UserChatSection>
       <UserCardSection />
     </UserChat>

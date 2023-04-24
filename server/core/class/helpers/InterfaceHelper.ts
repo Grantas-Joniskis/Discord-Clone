@@ -1,7 +1,7 @@
 
 class InterfaceHelper {
     /**
-     * Get if the class implement a method from an interface (TS can check through "instanceof")
+     * Get if the class implement a method from an interface (TS can't check through "instanceof")
      * @param obj
      * @param keys
      */

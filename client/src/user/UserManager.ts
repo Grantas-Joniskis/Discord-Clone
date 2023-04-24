@@ -10,6 +10,10 @@ export default class UserManager {
     });
   }
 
+  public static getFirstUser(): User {
+    return UserManager.users[0];
+  }
+
   public static getUserFromId(id: number) {
     return UserManager.users.find((u) => u.id === id);
   }
