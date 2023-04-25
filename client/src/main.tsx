@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './colors.css';
-import './main.css';
+import 'style/colors.css';
+import 'style/main.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import { RouterProvider } from 'react-router-dom';

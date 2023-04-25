@@ -40,7 +40,7 @@ class SendMessageController extends BaseController implements IControllerPostExt
                 content: schemaRequest.text
             }})
 
-        // Send 2 events through socket, one for the sender, and one for the receiver
+        // Send 2 events through socket, one for the receiver, and one for the sender.
         this.io.fetchSockets().then(sockets => {
             sockets.forEach(socket => {
                 if (socket.data.user === undefined) return;

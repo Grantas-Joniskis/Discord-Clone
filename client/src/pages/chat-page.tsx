@@ -31,6 +31,7 @@ const ChatPage = () => {
 
     setMessages([]);
 
+    // MIGHT NEED THIS TO REMOVE LATER !
     if (CurrentUser.getReceiver() === undefined) return () => {};
 
     AxiosService.getMessagesHistory(CurrentUser.getReceiver()?.id as number).then((response) => {
@@ -78,7 +79,7 @@ const ChatPage = () => {
       </UserListSection>
       <UserChatSection>
         <UserChatTitle />
-        {/* DIRTY WAY BUT OK FOR NOW !! */}
+        {/* DIRTY WAY BUT WILL DO FOR NOW !! */}
         {
           CurrentUser.getReceiver() !== undefined && (
             <>

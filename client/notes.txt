@@ -36,6 +36,15 @@ PLAN:
 - 23rd If enough time, create extra functionallity for updating user data.
 - 24th Study the back-end code prepare for presentation.
 
+.ENV data:
+VITE_SERVER_PROTOCOL="http"
+VITE_SERVER_DOMAIN="localhost"
+VITE_SERVER_PORT="8889"
+
+VITE_SOCKET_PROTOCOL="http"
+VITE_SOCKET_DOMAIN="localhost"
+VITE_SOCKET_PORT="8889"
+
 
 ACCOUNTS:
   1.
